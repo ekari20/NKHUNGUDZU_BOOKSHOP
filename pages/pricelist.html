@@ -112,31 +112,44 @@
          MAIN CONTENT
          ===================================================== -->
 
-    <main class="price-list-page">
+    <main>
       <!-- =====================================================
-         PRICE LIST HEADER
+         PRICE LIST HERO
          ===================================================== -->
 
-      <section class="page-header">
+      <section class="page-hero">
         <div class="container">
-          <span class="section-label"> NKHUNGUDZU BOOKSHOP </span>
+          <span class="hero-label"> NKHUNGUDZU BOOKSHOP </span>
 
           <h1>2026 Price List</h1>
 
           <p>
-            Browse our educational books, literature, dictionaries and teacher's
-            guides.
+            Explore our educational books, teacher's guides, literature books
+            and dictionaries.
           </p>
         </div>
       </section>
 
       <!-- =====================================================
-         PRICE SEARCH
+         PRICE LIST CONTROLS
          ===================================================== -->
 
-      <section class="price-search-section">
+      <section class="price-list-section">
         <div class="container">
-          <div class="price-search-box">
+          <div class="price-list-heading">
+            <span class="section-label"> OUR PRICES </span>
+
+            <h2>Browse Our Products</h2>
+
+            <p>
+              Find books and educational materials available at Nkhungudzu
+              Bookshop.
+            </p>
+          </div>
+
+          <!-- SEARCH -->
+
+          <div class="price-search">
             <input
               type="text"
               id="priceSearch"
@@ -147,260 +160,1125 @@
             <button type="button" id="priceSearchButton">🔍 Search</button>
           </div>
 
-          <p id="searchResultsMessage" class="search-results-message"></p>
-        </div>
-      </section>
+          <!-- CATEGORY BUTTONS -->
 
-      <!-- =====================================================
-         SECONDARY TEXTBOOKS
-         ===================================================== -->
+          <div class="price-filters">
+            <button
+              type="button"
+              class="price-filter active"
+              data-category="all"
+            >
+              All
+            </button>
 
-      <section class="price-section">
-        <div class="container">
-          <div class="section-heading">
-            <span class="section-label"> SECONDARY EDUCATION </span>
+            <button
+              type="button"
+              class="price-filter"
+              data-category="secondary"
+            >
+              Secondary Books
+            </button>
 
-            <h2>Secondary Textbooks by Publisher</h2>
+            <button
+              type="button"
+              class="price-filter"
+              data-category="made-simple"
+            >
+              Made Simple
+            </button>
+
+            <button
+              type="button"
+              class="price-filter"
+              data-category="literature"
+            >
+              Literature
+            </button>
+
+            <button
+              type="button"
+              class="price-filter"
+              data-category="dictionaries"
+            >
+              Dictionaries
+            </button>
+
+            <button
+              type="button"
+              class="price-filter"
+              data-category="secondary-teacher"
+            >
+              Secondary Teacher's Guides
+            </button>
+
+            <button
+              type="button"
+              class="price-filter"
+              data-category="primary-teacher"
+            >
+              Primary Teacher's Guides
+            </button>
           </div>
 
-          <div class="table-wrapper">
-            <table class="price-table">
-              <thead>
-                <tr>
-                  <th>Publisher</th>
+          <!-- =================================================
+                 PRODUCT COUNT
+                 ================================================= -->
 
-                  <th>Price</th>
-
-                  <th>Notes / Exceptions</th>
-                </tr>
-              </thead>
-
-              <tbody id="secondaryTextbooksTable">
-                <!-- JavaScript will insert products here -->
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </section>
-
-      <!-- =====================================================
-         MADE SIMPLE BOOKS
-         ===================================================== -->
-
-      <section class="price-section">
-        <div class="container">
-          <div class="section-heading">
-            <span class="section-label"> MADE SIMPLE </span>
-
-            <h2>Made Simple Books</h2>
+          <div class="price-results-info">
+            <p id="priceResultsCount">Loading products...</p>
           </div>
 
-          <div class="table-wrapper">
-            <table class="price-table">
-              <thead>
-                <tr>
-                  <th>Title</th>
+          <!-- =================================================
+                 PRODUCTS WILL APPEAR HERE
+                 ================================================= -->
 
-                  <th>Price</th>
-                </tr>
-              </thead>
+          <div class="price-grid" id="priceListContainer"></div>
 
-              <tbody id="madeSimpleBooksTable">
-                <!-- JavaScript will insert products here -->
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </section>
+          <!-- =====================================================
+            PRIMARY LEARNER TEXTBOOKS
+            ===================================================== -->
 
-      <!-- =====================================================
-         ENGLISH LITERATURE
-         ===================================================== -->
+    <!-- =====================================================
+     PRIMARY SCHOOL BOOKS
+     ===================================================== -->
 
-      <section class="price-section">
-        <div class="container">
-          <div class="section-heading">
-            <span class="section-label"> LITERATURE </span>
+<section class="primary-books-section">
 
-            <h2>English Literature</h2>
-          </div>
+    <div class="container">
 
-          <div class="table-wrapper">
-            <table class="price-table">
-              <thead>
-                <tr>
-                  <th>Title</th>
+        <div class="category-heading">
 
-                  <th>Price</th>
-                </tr>
-              </thead>
+            <span class="section-label">
+                PRIMARY SCHOOL BOOKS
+            </span>
 
-              <tbody id="englishLiteratureTable">
-                <!-- JavaScript will insert products here -->
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </section>
-
-      <!-- =====================================================
-         CHICHEWA LITERATURE
-         ===================================================== -->
-
-      <section class="price-section">
-        <div class="container">
-          <div class="section-heading">
-            <span class="section-label"> CHICHEWA LITERATURE </span>
-
-            <h2>Chichewa Literature</h2>
-          </div>
-
-          <div class="table-wrapper">
-            <table class="price-table">
-              <thead>
-                <tr>
-                  <th>Title</th>
-
-                  <th>Price</th>
-                </tr>
-              </thead>
-
-              <tbody id="chichewaLiteratureTable"></tbody>
-            </table>
-          </div>
-        </div>
-      </section>
-
-      <!-- =====================================================
-         DICTIONARIES
-         ===================================================== -->
-
-      <section class="price-section">
-        <div class="container">
-          <div class="section-heading">
-            <span class="section-label"> REFERENCE BOOKS </span>
-
-            <h2>Dictionaries & Other Books</h2>
-          </div>
-
-          <div class="table-wrapper">
-            <table class="price-table">
-              <thead>
-                <tr>
-                  <th>Title</th>
-
-                  <th>Price</th>
-                </tr>
-              </thead>
-
-              <tbody id="dictionariesTable"></tbody>
-            </table>
-          </div>
-        </div>
-      </section>
-
-      <!-- =====================================================
-         SECONDARY TEACHER GUIDES
-         ===================================================== -->
-
-      <section class="price-section">
-        <div class="container">
-          <div class="section-heading">
-            <span class="section-label"> TEACHER RESOURCES </span>
-
-            <h2>Secondary Teacher's Guides</h2>
-          </div>
-
-          <div class="teacher-guide-card">
-            <h3>All Secondary Teacher's Guides</h3>
+            <h2>
+                Textbooks for Standards 1–8
+            </h2>
 
             <p>
-              Price:
-              <strong id="secondaryTeacherGuidePrice"> </strong>
+                Explore our primary school textbooks,
+                subject by subject, from Standard 1
+                through Standard 8.
             </p>
+
+        </div>
+
+
+        <div class="primary-books-grid">
+
+
+            <!-- =================================================
+                 STD 1
+                 ================================================= -->
+
+            <article class="primary-standard-card">
+
+                <div class="standard-header">
+
+                    <span class="standard-label">
+                        PRIMARY
+                    </span>
+
+                    <h3>
+                        STD 1
+                    </h3>
+
+                    <p>
+                        7 textbooks
+                    </p>
+
+                </div>
+
+
+                <div class="package-container">
+
+                    <div class="package core-package">
+
+                        <span>
+                            CORE PACKAGE
+                        </span>
+
+                        <strong>
+                            K28,000
+                        </strong>
+
+                        <p>
+                            Includes all listed textbooks
+                            except Religious Education.
+                        </p>
+
+                    </div>
+
+
+                    <div class="package complete-package">
+
+                        <span>
+                            COMPLETE PACKAGE
+                        </span>
+
+                        <strong>
+                            K30,500
+                        </strong>
+
+                        <p>
+                            Includes all listed textbooks,
+                            including Religious Education.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <button
+                    class="subjects-toggle"
+                    type="button"
+                >
+                    View Subjects
+                    <span>▼</span>
+                </button>
+
+
+                <div class="subjects-list">
+
+                    <div class="subject-row">
+                        <span>Bible Knowledge</span>
+                        <strong>K2,500</strong>
+                    </div>
+
+                    <div class="subject-row">
+                        <span>Expressive Arts</span>
+                        <strong>K3,500</strong>
+                    </div>
+
+                    <div class="subject-row">
+                        <span>English</span>
+                        <strong>K6,500</strong>
+                    </div>
+
+                    <div class="subject-row">
+                        <span>Chichewa</span>
+                        <strong>K7,000</strong>
+                    </div>
+
+                    <div class="subject-row">
+                        <span>Kuyamba Sukulu</span>
+                        <strong>K4,000</strong>
+                    </div>
+
+                    <div class="subject-row">
+                        <span>Mathematics</span>
+                        <strong>K4,500</strong>
+                    </div>
+
+                    <div class="subject-row">
+                        <span>Religious Education</span>
+                        <strong>K5,000</strong>
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- =================================================
+                 STD 2
+                 ================================================= -->
+
+            <article class="primary-standard-card">
+
+                <div class="standard-header">
+
+                    <span class="standard-label">
+                        PRIMARY
+                    </span>
+
+                    <h3>
+                        STD 2
+                    </h3>
+
+                    <p>
+                        7 textbooks
+                    </p>
+
+                </div>
+
+
+                <div class="package-container">
+
+                    <div class="package core-package">
+
+                        <span>
+                            CORE PACKAGE
+                        </span>
+
+                        <strong>
+                            K37,500
+                        </strong>
+
+                        <p>
+                            Excluding Religious Education.
+                        </p>
+
+                    </div>
+
+
+                    <div class="package complete-package">
+
+                        <span>
+                            COMPLETE PACKAGE
+                        </span>
+
+                        <strong>
+                            K37,500
+                        </strong>
+
+                        <p>
+                            Including Religious Education.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <button
+                    class="subjects-toggle"
+                    type="button"
+                >
+                    View Subjects
+                    <span>▼</span>
+                </button>
+
+
+                <div class="subjects-list">
+
+                    <div class="subject-row">
+                        <span>Bible Knowledge</span>
+                        <strong>K4,000</strong>
+                    </div>
+
+                    <div class="subject-row">
+                        <span>English</span>
+                        <strong>K10,000</strong>
+                    </div>
+
+                    <div class="subject-row">
+                        <span>Mathematics</span>
+                        <strong>K4,500</strong>
+                    </div>
+
+                    <div class="subject-row">
+                        <span>Chichewa</span>
+                        <strong>K9,000</strong>
+                    </div>
+
+                    <div class="subject-row">
+                        <span>Expressive Arts</span>
+                        <strong>K4,500</strong>
+                    </div>
+
+                    <div class="subject-row">
+                        <span>Life Skills</span>
+                        <strong>K5,500</strong>
+                    </div>
+
+                    <div class="subject-row">
+                        <span>Religious Education</span>
+                        <strong>K4,000</strong>
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- =================================================
+                 STD 3
+                 ================================================= -->
+
+            <article class="primary-standard-card">
+
+                <div class="standard-header">
+
+                    <span class="standard-label">
+                        PRIMARY
+                    </span>
+
+                    <h3>
+                        STD 3
+                    </h3>
+
+                    <p>
+                        8 textbooks
+                    </p>
+
+                </div>
+
+
+                <div class="package-container">
+
+                    <div class="package core-package">
+
+                        <span>
+                            CORE PACKAGE
+                        </span>
+
+                        <strong>
+                            K38,000
+                        </strong>
+
+                        <p>
+                            Excluding Religious Education.
+                        </p>
+
+                    </div>
+
+
+                    <div class="package complete-package">
+
+                        <span>
+                            COMPLETE PACKAGE
+                        </span>
+
+                        <strong>
+                            K39,500
+                        </strong>
+
+                        <p>
+                            Including Religious Education.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <button
+                    class="subjects-toggle"
+                    type="button"
+                >
+                    View Subjects
+                    <span>▼</span>
+                </button>
+
+
+                <div class="subjects-list">
+
+                    <div class="subject-row">
+                        <span>Bible Knowledge</span>
+                        <strong>K4,000</strong>
+                    </div>
+
+                    <div class="subject-row">
+                        <span>English</span>
+                        <strong>K7,500</strong>
+                    </div>
+
+                    <div class="subject-row">
+                        <span>Mathematics</span>
+                        <strong>K4,500</strong>
+                    </div>
+
+                    <div class="subject-row">
+                        <span>Chichewa</span>
+                        <strong>K6,500</strong>
+                    </div>
+
+                    <div class="subject-row">
+                        <span>Social Studies</span>
+                        <strong>K6,500</strong>
+                    </div>
+
+                    <div class="subject-row">
+                        <span>Expressive Arts</span>
+                        <strong>K4,500</strong>
+                    </div>
+
+                    <div class="subject-row">
+                        <span>Life Skills</span>
+                        <strong>K4,500</strong>
+                    </div>
+
+                    <div class="subject-row">
+                        <span>Religious Education</span>
+                        <strong>K5,500</strong>
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- =================================================
+                 STD 4
+                 ================================================= -->
+
+            <article class="primary-standard-card">
+
+                <div class="standard-header">
+
+                    <span class="standard-label">
+                        PRIMARY
+                    </span>
+
+                    <h3>
+                        STD 4
+                    </h3>
+
+                    <p>
+                        9 textbooks
+                    </p>
+
+                </div>
+
+
+                <div class="package-container">
+
+                    <div class="package core-package">
+
+                        <span>
+                            CORE PACKAGE
+                        </span>
+
+                        <strong>
+                            K44,000
+                        </strong>
+
+                        <p>
+                            Excluding Religious Education.
+                        </p>
+
+                    </div>
+
+
+                    <div class="package complete-package">
+
+                        <span>
+                            COMPLETE PACKAGE
+                        </span>
+
+                        <strong>
+                            K43,500
+                        </strong>
+
+                        <p>
+                            Including Religious Education.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <button
+                    class="subjects-toggle"
+                    type="button"
+                >
+                    View Subjects
+                    <span>▼</span>
+                </button>
+
+
+                <div class="subjects-list">
+
+                    <div class="subject-row">
+                        <span>Bible Knowledge</span>
+                        <strong>K4,500</strong>
+                    </div>
+
+                    <div class="subject-row">
+                        <span>English</span>
+                        <strong>K8,000</strong>
+                    </div>
+
+                    <div class="subject-row">
+                        <span>Mathematics</span>
+                        <strong>K4,500</strong>
+                    </div>
+
+                    <div class="subject-row">
+                        <span>Chichewa</span>
+                        <strong>K6,500</strong>
+                    </div>
+
+                    <div class="subject-row">
+                        <span>Agriculture</span>
+                        <strong>K5,000</strong>
+                    </div>
+
+                    <div class="subject-row">
+                        <span>Social & Environmental Studies</span>
+                        <strong>K6,500</strong>
+                    </div>
+
+                    <div class="subject-row">
+                        <span>Expressive Arts</span>
+                        <strong>K4,500</strong>
+                    </div>
+
+                    <div class="subject-row">
+                        <span>Life Skills</span>
+                        <strong>K4,500</strong>
+                    </div>
+
+                    <div class="subject-row">
+                        <span>Religious Education</span>
+                        <strong>K4,000</strong>
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- =================================================
+                 STD 5
+                 ================================================= -->
+
+            <article class="primary-standard-card">
+
+                <div class="standard-header">
+
+                    <span class="standard-label">
+                        PRIMARY
+                    </span>
+
+                    <h3>
+                        STD 5
+                    </h3>
+
+                    <p>
+                        10 textbooks
+                    </p>
+
+                </div>
+
+
+                <div class="package-container">
+
+                    <div class="package core-package">
+
+                        <span>
+                            CORE PACKAGE
+                        </span>
+
+                        <strong>
+                            K51,400
+                        </strong>
+
+                        <p>
+                            Excluding Religious Education.
+                        </p>
+
+                    </div>
+
+
+                    <div class="package complete-package">
+
+                        <span>
+                            COMPLETE PACKAGE
+                        </span>
+
+                        <strong>
+                            K51,400
+                        </strong>
+
+                        <p>
+                            Including Religious Education.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <button
+                    class="subjects-toggle"
+                    type="button"
+                >
+                    View Subjects
+                    <span>▼</span>
+                </button>
+
+
+                <div class="subjects-list">
+
+                    <div class="subject-row">
+                        <span>Bible Knowledge</span>
+                        <strong>K3,500</strong>
+                    </div>
+
+                    <div class="subject-row">
+                        <span>English</span>
+                        <strong>K8,500</strong>
+                    </div>
+
+                    <div class="subject-row">
+                        <span>Mathematics</span>
+                        <strong>K8,000</strong>
+                    </div>
+
+                    <div class="subject-row">
+                        <span>Chichewa</span>
+                        <strong>K8,500</strong>
+                    </div>
+
+                    <div class="subject-row">
+                        <span>Agriculture</span>
+                        <strong>K5,400</strong>
+                    </div>
+
+                    <div class="subject-row">
+                        <span>Social & Environmental Studies</span>
+                        <strong>K5,500</strong>
+                    </div>
+
+                    <div class="subject-row">
+                        <span>Expressive Arts</span>
+                        <strong>K4,000</strong>
+                    </div>
+
+                    <div class="subject-row">
+                        <span>Life Skills</span>
+                        <strong>K4,500</strong>
+                    </div>
+
+                    <div class="subject-row">
+                        <span>Science</span>
+                        <strong>K3,500</strong>
+                    </div>
+
+                    <div class="subject-row">
+                        <span>Religious Education</span>
+                        <strong>K3,500</strong>
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- =================================================
+                 STD 6
+                 ================================================= -->
+
+            <article class="primary-standard-card">
+
+                <div class="standard-header">
+
+                    <span class="standard-label">
+                        PRIMARY
+                    </span>
+
+                    <h3>
+                        STD 6
+                    </h3>
+
+                    <p>
+                        10 textbooks
+                    </p>
+
+                </div>
+
+
+                <div class="package-container">
+
+                    <div class="package core-package">
+
+                        <span>
+                            CORE PACKAGE
+                        </span>
+
+                        <strong>
+                            K62,300
+                        </strong>
+
+                        <p>
+                            Excluding Religious Education.
+                        </p>
+
+                    </div>
+
+
+                    <div class="package complete-package">
+
+                        <span>
+                            COMPLETE PACKAGE
+                        </span>
+
+                        <strong>
+                            K62,300
+                        </strong>
+
+                        <p>
+                            Including Religious Education.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <button
+                    class="subjects-toggle"
+                    type="button"
+                >
+                    View Subjects
+                    <span>▼</span>
+                </button>
+
+
+                <div class="subjects-list">
+
+                    <div class="subject-row">
+                        <span>Bible Knowledge</span>
+                        <strong>K3,500</strong>
+                    </div>
+
+                    <div class="subject-row">
+                        <span>English</span>
+                        <strong>K8,500</strong>
+                    </div>
+
+                    <div class="subject-row">
+                        <span>Mathematics</span>
+                        <strong>K10,300</strong>
+                    </div>
+
+                    <div class="subject-row">
+                        <span>Chichewa</span>
+                        <strong>K10,500</strong>
+                    </div>
+
+                    <div class="subject-row">
+                        <span>Agriculture</span>
+                        <strong>K6,500</strong>
+                    </div>
+
+                    <div class="subject-row">
+                        <span>Social & Environmental Studies</span>
+                        <strong>K7,500</strong>
+                    </div>
+
+                    <div class="subject-row">
+                        <span>Expressive Arts</span>
+                        <strong>K4,500</strong>
+                    </div>
+
+                    <div class="subject-row">
+                        <span>Life Skills</span>
+                        <strong>K5,500</strong>
+                    </div>
+
+                    <div class="subject-row">
+                        <span>Science</span>
+                        <strong>K5,500</strong>
+                    </div>
+
+                    <div class="subject-row">
+                        <span>Religious Education</span>
+                        <strong>K3,500</strong>
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- =================================================
+                 STD 7
+                 ================================================= -->
+
+            <article class="primary-standard-card">
+
+                <div class="standard-header">
+
+                    <span class="standard-label">
+                        PRIMARY
+                    </span>
+
+                    <h3>
+                        STD 7
+                    </h3>
+
+                    <p>
+                        10 textbooks
+                    </p>
+
+                </div>
+
+
+                <div class="package-container">
+
+                    <div class="package core-package">
+
+                        <span>
+                            CORE PACKAGE
+                        </span>
+
+                        <strong>
+                            K63,000
+                        </strong>
+
+                        <p>
+                            Excluding Religious Education.
+                        </p>
+
+                    </div>
+
+
+                    <div class="package complete-package">
+
+                        <span>
+                            COMPLETE PACKAGE
+                        </span>
+
+                        <strong>
+                            K62,500
+                        </strong>
+
+                        <p>
+                            Including Religious Education.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <button
+                    class="subjects-toggle"
+                    type="button"
+                >
+                    View Subjects
+                    <span>▼</span>
+                </button>
+
+
+                <div class="subjects-list">
+
+                    <div class="subject-row">
+                        <span>Bible Knowledge</span>
+                        <strong>K3,500</strong>
+                    </div>
+
+                    <div class="subject-row">
+                        <span>English</span>
+                        <strong>K6,500</strong>
+                    </div>
+
+                    <div class="subject-row">
+                        <span>Mathematics</span>
+                        <strong>K12,500</strong>
+                    </div>
+
+                    <div class="subject-row">
+                        <span>Chichewa</span>
+                        <strong>K8,500</strong>
+                    </div>
+
+                    <div class="subject-row">
+                        <span>Agriculture</span>
+                        <strong>K6,500</strong>
+                    </div>
+
+                    <div class="subject-row">
+                        <span>Social & Environmental Studies</span>
+                        <strong>K8,500</strong>
+                    </div>
+
+                    <div class="subject-row">
+                        <span>Expressive Arts</span>
+                        <strong>K5,500</strong>
+                    </div>
+
+                    <div class="subject-row">
+                        <span>Life Skills</span>
+                        <strong>K5,500</strong>
+                    </div>
+
+                    <div class="subject-row">
+                        <span>Science</span>
+                        <strong>K6,000</strong>
+                    </div>
+
+                    <div class="subject-row">
+                        <span>Religious Education</span>
+                        <strong>K3,000</strong>
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- =================================================
+                 STD 8
+                 ================================================= -->
+
+            <article class="primary-standard-card">
+
+                <div class="standard-header">
+
+                    <span class="standard-label">
+                        PRIMARY
+                    </span>
+
+                    <h3>
+                        STD 8
+                    </h3>
+
+                    <p>
+                        10 textbooks
+                    </p>
+
+                </div>
+
+
+                <div class="package-container">
+
+                    <div class="package core-package">
+
+                        <span>
+                            CORE PACKAGE
+                        </span>
+
+                        <strong>
+                            K61,500
+                        </strong>
+
+                        <p>
+                            Excluding Religious Education.
+                        </p>
+
+                    </div>
+
+
+                    <div class="package complete-package">
+
+                        <span>
+                            COMPLETE PACKAGE
+                        </span>
+
+                        <strong>
+                            K62,500
+                        </strong>
+
+                        <p>
+                            Including Religious Education.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <button
+                    class="subjects-toggle"
+                    type="button"
+                >
+                    View Subjects
+                    <span>▼</span>
+                </button>
+
+
+                <div class="subjects-list">
+
+                    <div class="subject-row">
+                        <span>Bible Knowledge</span>
+                        <strong>K3,000</strong>
+                    </div>
+
+                    <div class="subject-row">
+                        <span>English</span>
+                        <strong>K9,500</strong>
+                    </div>
+
+                    <div class="subject-row">
+                        <span>Mathematics</span>
+                        <strong>K12,500</strong>
+                    </div>
+
+                    <div class="subject-row">
+                        <span>Chichewa</span>
+                        <strong>K8,500</strong>
+                    </div>
+
+                    <div class="subject-row">
+                        <span>Agriculture</span>
+                        <strong>K6,500</strong>
+                    </div>
+
+                    <div class="subject-row">
+                        <span>Social & Environmental Studies</span>
+                        <strong>K8,000</strong>
+                    </div>
+
+                    <div class="subject-row">
+                        <span>Expressive Arts</span>
+                        <strong>K4,500</strong>
+                    </div>
+
+                    <div class="subject-row">
+                        <span>Life Skills</span>
+                        <strong>K4,500</strong>
+                    </div>
+
+                    <div class="subject-row">
+                        <span>Science</span>
+                        <strong>K4,500</strong>
+                    </div>
+
+                    <div class="subject-row">
+                        <span>Religious Education</span>
+                        <strong>K4,000</strong>
+                    </div>
+
+                </div>
+
+            </article>
+
+
+        </div>
+
+    </div>
+
+</section>          
+
+          <!-- =================================================
+                 NO RESULTS MESSAGE
+                 ================================================= -->
+
+          <div
+            class="no-price-results"
+            id="noPriceResults"
+            style="display: none"
+          >
+            <div class="no-results-icon">🔎</div>
+
+            <h3>No products found</h3>
+
+            <p>We couldn't find anything matching your search.</p>
           </div>
         </div>
       </section>
 
       <!-- =====================================================
-         PRIMARY TEACHER GUIDES 1 - 4
+         PRICE LIST NOTE
          ===================================================== -->
 
-      <section class="price-section">
+      <section class="price-note">
         <div class="container">
-          <div class="section-heading">
-            <span class="section-label"> PRIMARY EDUCATION </span>
-
-            <h2>Primary Teacher's Guides — STD 1 to STD 4</h2>
-          </div>
-
-          <div class="table-wrapper">
-            <table class="price-table">
-              <thead>
-                <tr>
-                  <th>Subject</th>
-                  <th>STD 1</th>
-                  <th>STD 2</th>
-                  <th>STD 3</th>
-                  <th>STD 4</th>
-                </tr>
-              </thead>
-
-              <tbody id="primaryGuidesOneToFourTable"></tbody>
-            </table>
-          </div>
-        </div>
-      </section>
-
-      <!-- =====================================================
-         PRIMARY TEACHER GUIDES 5 - 8
-         ===================================================== -->
-
-      <section class="price-section">
-        <div class="container">
-          <div class="section-heading">
-            <span class="section-label"> PRIMARY EDUCATION </span>
-
-            <h2>Primary Teacher's Guides — STD 5 to STD 8</h2>
-          </div>
-
-          <div class="table-wrapper">
-            <table class="price-table">
-              <thead>
-                <tr>
-                  <th>Subject</th>
-                  <th>STD 5</th>
-                  <th>STD 6</th>
-                  <th>STD 7</th>
-                  <th>STD 8</th>
-                </tr>
-              </thead>
-
-              <tbody id="primaryGuidesFiveToEightTable"></tbody>
-            </table>
-          </div>
-        </div>
-      </section>
-
-      <!-- =====================================================
-         PRIMARY LEARNER TEXTBOOKS
-         ===================================================== -->
-
-      <section class="price-section">
-        <div class="container">
-          <div class="section-heading">
-            <span class="section-label"> PRIMARY LEARNER TEXTBOOKS </span>
-
-            <h2>Primary Books — STD 1 to STD 8</h2>
+          <div class="price-note-box">
+            <h3>📌 Please Note</h3>
 
             <p>
-              Prices shown below are based on individual subjects. The standard
-              total excludes Religious Education unless otherwise stated.
+              Prices shown on this website are based on the Nkhungudzu Bookshop
+              2026 price list. Please contact your nearest branch to confirm
+              availability and current prices before visiting.
             </p>
-          </div>
-
-          <div id="primaryBooksContainer" class="primary-books-container">
-            <!-- JavaScript will create STD cards -->
           </div>
         </div>
       </section>
@@ -444,6 +1322,6 @@
       </div>
     </footer>
 
-    <script src="../js/pricelist-2.js"></script>
+    <script src="../js/pricelist.js"></script>
   </body>
 </html>
