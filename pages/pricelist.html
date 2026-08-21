@@ -1,0 +1,449 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/images/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/images/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/images/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/images/favicon/site.webmanifest" />
+
+    <title>Price List | Nkhungudzu Bookshop</title>
+
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+
+  <body>
+    <!-- =====================================================
+         TOP INFORMATION BAR
+         ===================================================== -->
+    <div class="top-bar">
+      <div class="container">
+        <div class="top-contact">
+          <span>📞 0998 184 070</span>
+          <span>✉️ nkhungudzubookshop@gmail.com</span>
+        </div>
+
+        <div class="top-social">
+          <span>Follow us:</span>
+          <a href="#" target="_blank">Facebook</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- =====================================================
+         HEADER
+         ===================================================== -->
+    <header class="main-header">
+      <div class="container header-content">
+        <!-- Logo -->
+        <a href="index.html" class="logo">
+          <img src="../images/logo.jpg" alt="Nkhungudzu bookshop Logo" />
+        </a>
+
+        <!-- Search -->
+        <div class="header-search">
+          <input
+            type="search"
+            placeholder="Search books, Bibles, stationery..."
+            aria-label="Search products"
+          />
+
+          <button type="button" aria-label="Search">🔍</button>
+        </div>
+      </div>
+    </header>
+
+    <!-- =====================================================
+         NAVIGATION
+         ===================================================== -->
+    <nav class="main-navigation">
+      <div class="container nav-container">
+        <button class="mobile-menu-button" type="button">☰</button>
+
+        <ul class="nav-menu">
+          <li>
+            <a href="../index.html">Home</a>
+          </li>
+
+          <li>
+            <a href="/pages/books.html">Books</a>
+          </li>
+
+          <li>
+            <a href="./bibles.html">Bibles & Song Books</a>
+          </li>
+
+          <li>
+            <a href="./stationery.html">Stationery</a>
+          </li>
+
+          <li>
+            <a href="./pricelist.html" class="active">Price List</a>
+          </li>
+
+          <li>
+            <a href="./reviews.html">Reviews</a>
+          </li>
+
+          <li>
+            <a href="./about.html">About Us</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- =====================================================
+         MAIN CONTENT
+         ===================================================== -->
+
+    <main class="price-list-page">
+      <!-- =====================================================
+         PRICE LIST HEADER
+         ===================================================== -->
+
+      <section class="page-header">
+        <div class="container">
+          <span class="section-label"> NKHUNGUDZU BOOKSHOP </span>
+
+          <h1>2026 Price List</h1>
+
+          <p>
+            Browse our educational books, literature, dictionaries and teacher's
+            guides.
+          </p>
+        </div>
+      </section>
+
+      <!-- =====================================================
+         PRICE SEARCH
+         ===================================================== -->
+
+      <section class="price-search-section">
+        <div class="container">
+          <div class="price-search-box">
+            <input
+              type="text"
+              id="priceSearch"
+              placeholder="Search for a book, subject or publisher..."
+              aria-label="Search price list"
+            />
+
+            <button type="button" id="priceSearchButton">🔍 Search</button>
+          </div>
+
+          <p id="searchResultsMessage" class="search-results-message"></p>
+        </div>
+      </section>
+
+      <!-- =====================================================
+         SECONDARY TEXTBOOKS
+         ===================================================== -->
+
+      <section class="price-section">
+        <div class="container">
+          <div class="section-heading">
+            <span class="section-label"> SECONDARY EDUCATION </span>
+
+            <h2>Secondary Textbooks by Publisher</h2>
+          </div>
+
+          <div class="table-wrapper">
+            <table class="price-table">
+              <thead>
+                <tr>
+                  <th>Publisher</th>
+
+                  <th>Price</th>
+
+                  <th>Notes / Exceptions</th>
+                </tr>
+              </thead>
+
+              <tbody id="secondaryTextbooksTable">
+                <!-- JavaScript will insert products here -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- =====================================================
+         MADE SIMPLE BOOKS
+         ===================================================== -->
+
+      <section class="price-section">
+        <div class="container">
+          <div class="section-heading">
+            <span class="section-label"> MADE SIMPLE </span>
+
+            <h2>Made Simple Books</h2>
+          </div>
+
+          <div class="table-wrapper">
+            <table class="price-table">
+              <thead>
+                <tr>
+                  <th>Title</th>
+
+                  <th>Price</th>
+                </tr>
+              </thead>
+
+              <tbody id="madeSimpleBooksTable">
+                <!-- JavaScript will insert products here -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- =====================================================
+         ENGLISH LITERATURE
+         ===================================================== -->
+
+      <section class="price-section">
+        <div class="container">
+          <div class="section-heading">
+            <span class="section-label"> LITERATURE </span>
+
+            <h2>English Literature</h2>
+          </div>
+
+          <div class="table-wrapper">
+            <table class="price-table">
+              <thead>
+                <tr>
+                  <th>Title</th>
+
+                  <th>Price</th>
+                </tr>
+              </thead>
+
+              <tbody id="englishLiteratureTable">
+                <!-- JavaScript will insert products here -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- =====================================================
+         CHICHEWA LITERATURE
+         ===================================================== -->
+
+      <section class="price-section">
+        <div class="container">
+          <div class="section-heading">
+            <span class="section-label"> CHICHEWA LITERATURE </span>
+
+            <h2>Chichewa Literature</h2>
+          </div>
+
+          <div class="table-wrapper">
+            <table class="price-table">
+              <thead>
+                <tr>
+                  <th>Title</th>
+
+                  <th>Price</th>
+                </tr>
+              </thead>
+
+              <tbody id="chichewaLiteratureTable"></tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- =====================================================
+         DICTIONARIES
+         ===================================================== -->
+
+      <section class="price-section">
+        <div class="container">
+          <div class="section-heading">
+            <span class="section-label"> REFERENCE BOOKS </span>
+
+            <h2>Dictionaries & Other Books</h2>
+          </div>
+
+          <div class="table-wrapper">
+            <table class="price-table">
+              <thead>
+                <tr>
+                  <th>Title</th>
+
+                  <th>Price</th>
+                </tr>
+              </thead>
+
+              <tbody id="dictionariesTable"></tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- =====================================================
+         SECONDARY TEACHER GUIDES
+         ===================================================== -->
+
+      <section class="price-section">
+        <div class="container">
+          <div class="section-heading">
+            <span class="section-label"> TEACHER RESOURCES </span>
+
+            <h2>Secondary Teacher's Guides</h2>
+          </div>
+
+          <div class="teacher-guide-card">
+            <h3>All Secondary Teacher's Guides</h3>
+
+            <p>
+              Price:
+              <strong id="secondaryTeacherGuidePrice"> </strong>
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- =====================================================
+         PRIMARY TEACHER GUIDES 1 - 4
+         ===================================================== -->
+
+      <section class="price-section">
+        <div class="container">
+          <div class="section-heading">
+            <span class="section-label"> PRIMARY EDUCATION </span>
+
+            <h2>Primary Teacher's Guides — STD 1 to STD 4</h2>
+          </div>
+
+          <div class="table-wrapper">
+            <table class="price-table">
+              <thead>
+                <tr>
+                  <th>Subject</th>
+                  <th>STD 1</th>
+                  <th>STD 2</th>
+                  <th>STD 3</th>
+                  <th>STD 4</th>
+                </tr>
+              </thead>
+
+              <tbody id="primaryGuidesOneToFourTable"></tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- =====================================================
+         PRIMARY TEACHER GUIDES 5 - 8
+         ===================================================== -->
+
+      <section class="price-section">
+        <div class="container">
+          <div class="section-heading">
+            <span class="section-label"> PRIMARY EDUCATION </span>
+
+            <h2>Primary Teacher's Guides — STD 5 to STD 8</h2>
+          </div>
+
+          <div class="table-wrapper">
+            <table class="price-table">
+              <thead>
+                <tr>
+                  <th>Subject</th>
+                  <th>STD 5</th>
+                  <th>STD 6</th>
+                  <th>STD 7</th>
+                  <th>STD 8</th>
+                </tr>
+              </thead>
+
+              <tbody id="primaryGuidesFiveToEightTable"></tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- =====================================================
+         PRIMARY LEARNER TEXTBOOKS
+         ===================================================== -->
+
+      <section class="price-section">
+        <div class="container">
+          <div class="section-heading">
+            <span class="section-label"> PRIMARY LEARNER TEXTBOOKS </span>
+
+            <h2>Primary Books — STD 1 to STD 8</h2>
+
+            <p>
+              Prices shown below are based on individual subjects. The standard
+              total excludes Religious Education unless otherwise stated.
+            </p>
+          </div>
+
+          <div id="primaryBooksContainer" class="primary-books-container">
+            <!-- JavaScript will create STD cards -->
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- =====================================================
+         FOOTER
+         ===================================================== -->
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-content">
+          <div>
+            <h3>Nkhungudzu Bookshop</h3>
+
+            <p>Education Made Simple.</p>
+          </div>
+
+          <div>
+            <h4>Quick Links</h4>
+
+            <a href="../index.html"> Home </a>
+
+            <a href="books.html"> Books </a>
+
+            <a href="about.html"> About Us </a>
+          </div>
+
+          <div>
+            <h4>Contact</h4>
+
+            <p>nkhungudzubookshop@gmail.com</p>
+
+            <p>Limbe: 0998 184 070</p>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>&copy; 2026 Nkhungudzu Bookshop. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="../js/pricelist-2.js"></script>
+  </body>
+</html>
