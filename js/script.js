@@ -231,28 +231,28 @@ document.addEventListener("DOMContentLoaded", function () {
       name: "Excel & Succeed Books",
       category: "Secondary Textbooks",
       brand: "Excel / Succeed",
-      image: "images/books/excel-succeed.jpg",
+      image: "images/books.jpeg",
     },
 
     {
       name: "Primary School Textbooks",
       category: "Primary Books",
       brand: "Nkhungudzu Bookshop",
-      image: "images/books/primary-books.jpg",
+      image: "images/books.jpeg",
     },
 
     {
       name: "Bibles",
       category: "Spiritual Literature",
       brand: "NIV / KJV / NKJV",
-      image: "images/bibles/bibles.jpg",
+      image: "images/bibles.jpeg",
     },
 
     {
       name: "School & Office Stationery",
       category: "Stationery",
       brand: "Various Products",
-      image: "images/stationery/stationery.jpg",
+      image: "images/stationary.jpeg",
     },
   ];
 
