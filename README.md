@@ -2,7 +2,7 @@
 
 ![NKHUNGUDZU Bookshop](images/screenshot/screenshot.jpeg)
 
-A modern online bookshop dedicated to selling school and religious books.
+A modern online bookshop dedicated to selling school and religious books [live priview](https://nkhungudzu-bookshop-git-main-uuu-f21f.vercel.app/).
 
 ## 📚 About
 
