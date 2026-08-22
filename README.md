@@ -1,5 +1,7 @@
 # NKHUNGUDZU BOOKSHOP
 
+![NKHUNGUDZU Bookshop](images/books.jpeg)
+
 A modern online bookshop dedicated to selling school and religious books.
 
 ## 📚 About
@@ -27,6 +29,8 @@ NKHUNGUDZU_BOOKSHOP/
 ├── index.html          # Main landing page
 ├── css/                # Stylesheets
 ├── js/                 # JavaScript files
+├── images/             # Image assets
+├── pages/              # Additional pages
 └── README.md          # This file
 ```
 
