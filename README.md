@@ -1,6 +1,6 @@
 # NKHUNGUDZU BOOKSHOP
 
-![NKHUNGUDZU Bookshop](images/books.jpeg)
+![NKHUNGUDZU Bookshop](images/screenshot/screenshot.jpeg)
 
 A modern online bookshop dedicated to selling school and religious books.
 
