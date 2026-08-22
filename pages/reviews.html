@@ -1,0 +1,416 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/images/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/images/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/images/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/images/favicon/site.webmanifest" />
+
+    <title>Reviews | Nkhungudzu Bookshop</title>
+
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+
+  <body>
+    <!-- =====================================================
+         TOP INFORMATION BAR
+         ===================================================== -->
+    <div class="top-bar">
+      <div class="container">
+        <div class="top-contact">
+          <span>📞 0998 184 070</span>
+          <span>✉️ nkhungudzubookshop@gmail.com</span>
+        </div>
+
+        <div class="top-social">
+          <span>Follow us:</span>
+          <a href="#" target="_blank">Facebook</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- =====================================================
+         HEADER
+         ===================================================== -->
+    <header class="main-header">
+      <div class="container header-content">
+        <!-- Logo -->
+        <a href="index.html" class="logo">
+          <img src="../images/logo.jpg" alt="Nkhungudzu bookshop Logo" />
+        </a>
+
+        <!-- Search -->
+        <div class="header-search">
+          <input
+            type="search"
+            placeholder="Search books, Bibles, stationery..."
+            aria-label="Search products"
+          />
+
+          <button type="button" aria-label="Search">🔍</button>
+        </div>
+      </div>
+    </header>
+
+    <!-- =====================================================
+         NAVIGATION
+         ===================================================== -->
+    <nav class="main-navigation">
+      <div class="container nav-container">
+        <button class="mobile-menu-button" type="button">☰</button>
+
+        <ul class="nav-menu">
+          <li>
+            <a href="../index.html">Home</a>
+          </li>
+
+          <li>
+            <a href="/pages/books.html">Books</a>
+          </li>
+
+          <li>
+            <a href="./bibles.html">Bibles & Song Books</a>
+          </li>
+
+          <li>
+            <a href="./stationery.html">Stationery</a>
+          </li>
+
+          <li>
+            <a href="./pricelist.html">Price List</a>
+          </li>
+
+          <li>
+            <a href="./reviews.html" class="active">Reviews</a>
+          </li>
+
+          <li>
+            <a href="./about.html">About Us</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <main>
+      <!-- =====================================================
+         REVIEWS PAGE HEADER
+         ===================================================== -->
+
+      <section class="page-header reviews-page-header">
+        <div class="container">
+          <span class="section-label"> CUSTOMER FEEDBACK </span>
+
+          <h1>Reviews & Ratings</h1>
+
+          <p>
+            We value your experience. Tell us what you think about Nkhungudzu
+            Bookshop.
+          </p>
+        </div>
+      </section>
+
+      <!-- =====================================================
+         OVERALL RATING
+         ===================================================== -->
+
+      <section class="overall-rating-section">
+        <div class="container">
+          <div class="overall-rating-card">
+            <span class="section-label"> OUR CUSTOMERS </span>
+
+            <h2>What Our Customers Say</h2>
+
+            <div class="rating-summary">
+              <div class="rating-number">
+                <strong id="averageRating"> 5.0 </strong>
+
+                <span> / 5 </span>
+              </div>
+
+              <div
+                class="rating-stars"
+                id="averageStars"
+                aria-label="Average rating"
+              >
+                ★★★★★
+              </div>
+
+              <p id="reviewCount">Based on 0 reviews</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =====================================================
+         REVIEW FORM
+         ===================================================== -->
+
+      <section class="review-form-section">
+        <div class="container">
+          <div class="review-layout">
+            <!-- REVIEW FORM -->
+
+            <div class="review-form-card">
+              <span class="section-label"> SHARE YOUR EXPERIENCE </span>
+
+              <h2>Leave a Review</h2>
+
+              <p>Tell us about your experience with Nkhungudzu Bookshop.</p>
+
+              <form id="reviewForm">
+                <!-- NAME -->
+
+                <div class="form-group">
+                  <label for="reviewName"> Your Name </label>
+
+                  <input
+                    type="text"
+                    id="reviewName"
+                    name="reviewName"
+                    placeholder="Enter your name"
+                    required
+                  />
+                </div>
+
+                <!-- RATING -->
+
+                <div class="form-group">
+                  <label> Your Rating </label>
+
+                  <div
+                    class="star-rating"
+                    id="starRating"
+                    role="radiogroup"
+                    aria-label="Choose a rating"
+                  >
+                    <button
+                      type="button"
+                      class="rating-star"
+                      data-rating="1"
+                      aria-label="1 star"
+                    >
+                      ★
+                    </button>
+
+                    <button
+                      type="button"
+                      class="rating-star"
+                      data-rating="2"
+                      aria-label="2 stars"
+                    >
+                      ★
+                    </button>
+
+                    <button
+                      type="button"
+                      class="rating-star"
+                      data-rating="3"
+                      aria-label="3 stars"
+                    >
+                      ★
+                    </button>
+
+                    <button
+                      type="button"
+                      class="rating-star"
+                      data-rating="4"
+                      aria-label="4 stars"
+                    >
+                      ★
+                    </button>
+
+                    <button
+                      type="button"
+                      class="rating-star"
+                      data-rating="5"
+                      aria-label="5 stars"
+                    >
+                      ★
+                    </button>
+                  </div>
+
+                  <input type="hidden" id="selectedRating" value="" />
+
+                  <p id="ratingMessage" class="rating-message">
+                    Select a rating
+                  </p>
+                </div>
+
+                <!-- COMMENT -->
+
+                <div class="form-group">
+                  <label for="reviewComment"> Your Review </label>
+
+                  <textarea
+                    id="reviewComment"
+                    name="reviewComment"
+                    rows="6"
+                    placeholder="Write your review here..."
+                    required
+                  ></textarea>
+                </div>
+
+                <!-- SUBMIT -->
+
+                <button
+                  type="submit"
+                  class="btn btn-primary review-submit-button"
+                >
+                  Submit Review
+                </button>
+
+                <p id="reviewFormMessage" class="review-form-message"></p>
+              </form>
+            </div>
+
+            <!-- REVIEW INFORMATION -->
+
+            <aside class="review-info-card">
+              <span class="section-label"> YOUR FEEDBACK MATTERS </span>
+
+              <h2>Help Us Improve</h2>
+
+              <p>
+                Your feedback helps us understand what our customers appreciate
+                and where we can improve.
+              </p>
+
+              <div class="review-info-item">
+                <span class="review-info-icon"> ⭐ </span>
+
+                <div>
+                  <h3>Rate Your Experience</h3>
+
+                  <p>Give us a rating from one to five stars.</p>
+                </div>
+              </div>
+
+              <div class="review-info-item">
+                <span class="review-info-icon"> 💬 </span>
+
+                <div>
+                  <h3>Share Your Thoughts</h3>
+
+                  <p>
+                    Tell us about your experience with our products and service.
+                  </p>
+                </div>
+              </div>
+
+              <div class="review-info-item">
+                <span class="review-info-icon"> ❤️ </span>
+
+                <div>
+                  <h3>Thank You</h3>
+
+                  <p>We appreciate your support of Nkhungudzu Bookshop.</p>
+                </div>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <!-- =====================================================
+         CUSTOMER REVIEWS
+         ===================================================== -->
+
+      <section class="customer-reviews-section">
+        <div class="container">
+          <div class="section-heading">
+            <span class="section-label"> CUSTOMER REVIEWS </span>
+
+            <h2>What People Are Saying</h2>
+          </div>
+
+          <div id="reviewsContainer" class="reviews-grid">
+            <!-- Reviews will be inserted by JavaScript -->
+          </div>
+        </div>
+      </section>
+
+      <!-- =====================================================
+         CONTACT CTA
+         ===================================================== -->
+
+      <section class="review-cta">
+        <div class="container">
+          <div class="cta-content">
+            <span class="section-label"> NKHUNGUDZU BOOKSHOP </span>
+
+            <h2>Have More Questions?</h2>
+
+            <p>
+              Visit one of our branches or contact us for more information about
+              our products and services.
+            </p>
+
+            <a href="about.html" class="btn btn-primary"> Contact Us </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- =====================================================
+         FOOTER
+         ===================================================== -->
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-content">
+          <div>
+            <h3>Nkhungudzu Bookshop</h3>
+
+            <p>Education Made Simple.</p>
+          </div>
+
+          <div>
+            <h4>Quick Links</h4>
+
+            <a href="../index.html"> Home </a>
+
+            <a href="pricelist.html"> Price List </a>
+
+            <a href="about.html"> About Us </a>
+          </div>
+
+          <div>
+            <h4>Contact</h4>
+
+            <p>nkhungudzubookshop@gmail.com</p>
+
+            <p>Limbe: 0998 184 070</p>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>&copy; 2026 Nkhungudzu Bookshop. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- =====================================================
+         JAVASCRIPT
+         ===================================================== -->
+
+    <script src="../js/reviews.js"></script>
+    <script src="../js/script.js"></script>
+  </body>
+</html>

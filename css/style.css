@@ -3654,3 +3654,1404 @@ ul {
     }
 
 }
+/* =========================================================
+   PHASE 6.12B
+   REVIEWS PAGE STYLING
+   ========================================================= */
+
+
+/* =========================================================
+   REVIEWS PAGE HEADER
+   ========================================================= */
+
+.reviews-page-header {
+    background:
+        linear-gradient(
+            rgba(0, 75, 45, 0.92),
+            rgba(0, 75, 45, 0.92)
+        );
+
+    color: #ffffff;
+}
+
+
+/* =========================================================
+   OVERALL RATING
+   ========================================================= */
+
+.overall-rating-section {
+    padding: 60px 0;
+
+    background: #f7f7f2;
+}
+
+
+.overall-rating-card {
+    max-width: 700px;
+
+    margin: 0 auto;
+
+    padding: 45px 30px;
+
+    background: #ffffff;
+
+    border-radius: 16px;
+
+    text-align: center;
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+
+.overall-rating-card h2 {
+    color: #063f29;
+
+    margin: 12px 0 25px;
+}
+
+
+.rating-summary {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+}
+
+
+.rating-number {
+    display: flex;
+
+    align-items: baseline;
+
+    gap: 4px;
+}
+
+
+.rating-number strong {
+    font-size: 3.5rem;
+
+    color: #a51621;
+}
+
+
+.rating-number span {
+    font-size: 1.2rem;
+
+    color: #777;
+}
+
+
+.rating-stars {
+    margin: 8px 0;
+
+    font-size: 2rem;
+
+    letter-spacing: 4px;
+
+    color: #f2b01e;
+}
+
+
+.rating-summary p {
+    color: #777;
+
+    margin: 0;
+}
+
+
+/* =========================================================
+   REVIEW FORM SECTION
+   ========================================================= */
+
+.review-form-section {
+    padding: 70px 0;
+
+    background: #ffffff;
+}
+
+
+.review-layout {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1.5fr)
+        minmax(280px, 1fr);
+
+    gap: 35px;
+
+    align-items: start;
+}
+
+
+/* =========================================================
+   REVIEW FORM CARD
+   ========================================================= */
+
+.review-form-card {
+    padding: 35px;
+
+    background: #f7f7f2;
+
+    border-radius: 16px;
+
+    border-top: 5px solid #087443;
+}
+
+
+.review-form-card h2 {
+    color: #063f29;
+
+    margin: 12px 0 10px;
+}
+
+
+.review-form-card > p {
+    color: #666;
+
+    line-height: 1.6;
+
+    margin-bottom: 25px;
+}
+
+
+/* =========================================================
+   FORM ELEMENTS
+   ========================================================= */
+
+.form-group {
+    margin-bottom: 22px;
+}
+
+
+.form-group label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    font-weight: 700;
+
+    color: #063f29;
+}
+
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+
+    padding: 13px 15px;
+
+    border: 1px solid #d6d6d6;
+
+    border-radius: 8px;
+
+    background: #ffffff;
+
+    color: #333;
+
+    font-family: inherit;
+
+    font-size: 0.95rem;
+
+    outline: none;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+.form-group textarea {
+    resize: vertical;
+
+    min-height: 140px;
+}
+
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #087443;
+
+    box-shadow:
+        0 0 0 3px rgba(8, 116, 67, 0.10);
+}
+
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #999;
+}
+
+
+/* =========================================================
+   INTERACTIVE RATING STARS
+   ========================================================= */
+
+.star-rating {
+    display: flex;
+
+    align-items: center;
+
+    gap: 3px;
+}
+
+
+.rating-star {
+    border: none;
+
+    background: transparent;
+
+    padding: 2px;
+
+    font-size: 2rem;
+
+    color: #d5d5d5;
+
+    cursor: pointer;
+
+    line-height: 1;
+
+    transition:
+        color 0.2s ease,
+        transform 0.15s ease;
+}
+
+
+.rating-star:hover {
+    color: #f2b01e;
+
+    transform: scale(1.12);
+}
+
+
+.rating-star.selected {
+    color: #f2b01e;
+}
+
+
+.rating-message {
+    margin-top: 7px;
+
+    font-size: 0.85rem;
+
+    color: #777;
+}
+
+
+/* =========================================================
+   REVIEW SUBMIT
+   ========================================================= */
+
+.review-submit-button {
+    border: none;
+
+    cursor: pointer;
+}
+
+
+.review-form-message {
+    margin-top: 15px;
+
+    font-weight: 600;
+
+    color: #087443;
+}
+
+
+/* =========================================================
+   REVIEW INFORMATION CARD
+   ========================================================= */
+
+.review-info-card {
+    padding: 35px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #063f29,
+            #087443
+        );
+
+    color: #ffffff;
+
+    border-radius: 16px;
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.10);
+}
+
+
+.review-info-card h2 {
+    margin: 12px 0 15px;
+
+    color: #ffffff;
+}
+
+
+.review-info-card > p {
+    line-height: 1.7;
+
+    opacity: 0.92;
+
+    margin-bottom: 30px;
+}
+
+
+.review-info-item {
+    display: flex;
+
+    gap: 15px;
+
+    align-items: flex-start;
+
+    padding: 18px 0;
+
+    border-top: 1px solid
+        rgba(255, 255, 255, 0.18);
+}
+
+
+.review-info-icon {
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    min-width: 42px;
+
+    height: 42px;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.12);
+
+    font-size: 1.2rem;
+}
+
+
+.review-info-item h3 {
+    margin: 0 0 5px;
+
+    font-size: 1rem;
+
+    color: #ffffff;
+}
+
+
+.review-info-item p {
+    margin: 0;
+
+    font-size: 0.88rem;
+
+    line-height: 1.5;
+
+    opacity: 0.82;
+}
+
+
+/* =========================================================
+   CUSTOMER REVIEWS
+   ========================================================= */
+
+.customer-reviews-section {
+    padding: 70px 0;
+
+    background: #f7f7f2;
+}
+
+
+.reviews-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            auto-fit,
+            minmax(270px, 1fr)
+        );
+
+    gap: 22px;
+}
+
+
+.review-card {
+    background: #ffffff;
+
+    padding: 25px;
+
+    border-radius: 12px;
+
+    border-left: 4px solid #a51621;
+
+    box-shadow:
+        0 6px 20px rgba(0, 0, 0, 0.07);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+.review-card:hover {
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 10px 25px rgba(0, 0, 0, 0.10);
+}
+
+
+.review-card-stars {
+    color: #f2b01e;
+
+    font-size: 1.1rem;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 10px;
+}
+
+
+.review-card h3 {
+    margin: 0 0 8px;
+
+    color: #063f29;
+
+    font-size: 1.05rem;
+}
+
+
+.review-card p {
+    color: #666;
+
+    line-height: 1.65;
+
+    margin: 0 0 12px;
+}
+
+
+.review-card-author {
+    font-size: 0.85rem;
+
+    font-weight: 700;
+
+    color: #a51621;
+}
+
+
+/* =========================================================
+   REVIEW CTA
+   ========================================================= */
+
+.review-cta {
+    padding: 65px 0;
+
+    background: #ffffff;
+
+    text-align: center;
+}
+
+
+.review-cta .cta-content {
+    max-width: 700px;
+
+    margin: 0 auto;
+}
+
+
+.review-cta h2 {
+    color: #063f29;
+
+    margin: 12px 0 15px;
+}
+
+
+.review-cta p {
+    color: #666;
+
+    line-height: 1.7;
+
+    margin-bottom: 25px;
+}
+
+
+/* =========================================================
+   MOBILE RESPONSIVENESS
+   ========================================================= */
+
+@media (max-width: 850px) {
+
+    .review-layout {
+        grid-template-columns: 1fr;
+    }
+
+
+    .review-info-card {
+        order: 2;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .overall-rating-section {
+        padding: 45px 0;
+    }
+
+
+    .overall-rating-card {
+        padding: 35px 20px;
+    }
+
+
+    .rating-number strong {
+        font-size: 3rem;
+    }
+
+
+    .rating-stars {
+        font-size: 1.7rem;
+
+        letter-spacing: 3px;
+    }
+
+
+    .review-form-section {
+        padding: 50px 0;
+    }
+
+
+    .review-form-card,
+    .review-info-card {
+        padding: 25px 20px;
+    }
+
+
+    .rating-star {
+        font-size: 1.8rem;
+    }
+
+
+    .customer-reviews-section {
+        padding: 50px 0;
+    }
+
+
+    .reviews-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+/* =========================================================
+   PHASE 6.13B
+   ABOUT US PAGE STYLING
+   ========================================================= */
+
+
+/* =========================================================
+   ABOUT PAGE HEADER
+   ========================================================= */
+
+.about-page-header {
+    background:
+        linear-gradient(
+            rgba(0, 75, 45, 0.92),
+            rgba(0, 75, 45, 0.92)
+        );
+
+    color: #ffffff;
+}
+
+
+/* =========================================================
+   OUR STORY
+   ========================================================= */
+
+.about-story-section {
+    padding: 75px 0;
+
+    background: #ffffff;
+}
+
+
+.about-story-grid {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1.5fr)
+        minmax(280px, 0.8fr);
+
+    gap: 50px;
+
+    align-items: center;
+}
+
+
+.about-story-content h2 {
+    color: #063f29;
+
+    margin: 12px 0 20px;
+}
+
+
+.about-story-content p {
+    color: #666;
+
+    line-height: 1.8;
+
+    margin-bottom: 17px;
+}
+
+
+.about-highlight-card {
+    padding: 45px 30px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #063f29,
+            #087443
+        );
+
+    color: #ffffff;
+
+    border-radius: 18px;
+
+    text-align: center;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.12);
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+
+.about-highlight-card::after {
+    content: "";
+
+    position: absolute;
+
+    width: 150px;
+
+    height: 150px;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.06);
+
+    right: -55px;
+
+    bottom: -55px;
+}
+
+
+.about-highlight-icon {
+    font-size: 3.5rem;
+
+    margin-bottom: 15px;
+}
+
+
+.about-highlight-card h3 {
+    color: #ffffff;
+
+    font-size: 1.6rem;
+
+    margin-bottom: 12px;
+}
+
+
+.about-highlight-card p {
+    color: rgba(255, 255, 255, 0.88);
+
+    line-height: 1.6;
+
+    margin-bottom: 30px;
+}
+
+
+.about-year {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    padding-top: 20px;
+
+    border-top:
+        1px solid
+        rgba(255, 255, 255, 0.2);
+}
+
+
+.about-year strong {
+    font-size: 2.5rem;
+
+    color: #ffffff;
+}
+
+
+.about-year span {
+    font-size: 0.85rem;
+
+    opacity: 0.8;
+}
+
+
+/* =========================================================
+   MISSION / VISION / VALUES
+   ========================================================= */
+
+.mission-section {
+    padding: 75px 0;
+
+    background: #f7f7f2;
+}
+
+
+.mission-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 25px;
+}
+
+
+.mission-card {
+    padding: 35px 28px;
+
+    background: #ffffff;
+
+    border-radius: 15px;
+
+    text-align: center;
+
+    border-top: 4px solid #087443;
+
+    box-shadow:
+        0 7px 22px rgba(0, 0, 0, 0.07);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+.mission-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 12px 28px rgba(0, 0, 0, 0.10);
+}
+
+
+.mission-icon {
+    font-size: 2.5rem;
+
+    margin-bottom: 15px;
+}
+
+
+.mission-card h3 {
+    color: #063f29;
+
+    margin-bottom: 12px;
+}
+
+
+.mission-card p {
+    color: #666;
+
+    line-height: 1.7;
+
+    margin: 0;
+}
+
+
+.values-list {
+    list-style: none;
+
+    padding: 0;
+
+    margin: 0;
+}
+
+
+.values-list li {
+    color: #666;
+
+    padding: 5px 0;
+}
+
+
+.values-list li::before {
+    content: "✓";
+
+    color: #a51621;
+
+    font-weight: 700;
+
+    margin-right: 8px;
+}
+
+
+/* =========================================================
+   WHAT WE OFFER
+   ========================================================= */
+
+.what-we-offer-section {
+    padding: 75px 0;
+
+    background: #ffffff;
+}
+
+
+.what-we-offer-section .section-heading {
+    margin-bottom: 40px;
+}
+
+
+.offer-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 25px;
+}
+
+
+.offer-card {
+    padding: 35px 28px;
+
+    border-radius: 15px;
+
+    background: #f7f7f2;
+
+    text-align: center;
+
+    border-bottom: 4px solid #a51621;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+.offer-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+
+.offer-icon {
+    display: block;
+
+    font-size: 2.7rem;
+
+    margin-bottom: 15px;
+}
+
+
+.offer-card h3 {
+    color: #063f29;
+
+    margin-bottom: 12px;
+}
+
+
+.offer-card p {
+    color: #666;
+
+    line-height: 1.65;
+
+    margin: 0;
+}
+
+
+/* =========================================================
+   BRANCHES
+   ========================================================= */
+
+.branches-section {
+    padding: 75px 0;
+
+    background: #f7f7f2;
+}
+
+
+.branches-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, minmax(0, 1fr));
+
+    gap: 20px;
+}
+
+
+.branch-card {
+    position: relative;
+
+    padding: 35px 25px;
+
+    background: #ffffff;
+
+    border-radius: 15px;
+
+    text-align: center;
+
+    box-shadow:
+        0 7px 22px rgba(0, 0, 0, 0.07);
+
+    overflow: hidden;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+.branch-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 12px 28px rgba(0, 0, 0, 0.11);
+}
+
+
+.branch-number {
+    position: absolute;
+
+    top: 12px;
+
+    right: 15px;
+
+    font-size: 0.75rem;
+
+    font-weight: 700;
+
+    color: #a51621;
+
+    opacity: 0.7;
+}
+
+
+.branch-icon {
+    font-size: 2.3rem;
+
+    margin-bottom: 12px;
+}
+
+
+.branch-card h3 {
+    color: #063f29;
+
+    margin-bottom: 10px;
+}
+
+
+.branch-card p {
+    min-height: 45px;
+
+    color: #666;
+
+    font-size: 0.9rem;
+
+    line-height: 1.5;
+
+    margin-bottom: 18px;
+}
+
+
+.branch-card a {
+    color: #a51621;
+
+    font-weight: 700;
+
+    text-decoration: none;
+}
+
+
+.branch-card a:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================================================
+   OPENING HOURS
+   ========================================================= */
+
+.opening-hours-section {
+    padding: 70px 0;
+
+    background: #ffffff;
+}
+
+
+.opening-hours-card {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1fr)
+        minmax(300px, 1fr);
+
+    gap: 50px;
+
+    align-items: center;
+
+    padding: 45px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #063f29,
+            #087443
+        );
+
+    color: #ffffff;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.10);
+}
+
+
+.hours-content h2 {
+    color: #ffffff;
+
+    margin: 12px 0 15px;
+}
+
+
+.hours-content p {
+    color: rgba(255, 255, 255, 0.85);
+
+    line-height: 1.7;
+
+    margin: 0;
+}
+
+
+.hours-table {
+    background: rgba(255, 255, 255, 0.08);
+
+    border-radius: 12px;
+
+    overflow: hidden;
+}
+
+
+.hours-row {
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding: 18px 20px;
+
+    border-bottom:
+        1px solid
+        rgba(255, 255, 255, 0.15);
+}
+
+
+.hours-row:last-child {
+    border-bottom: none;
+}
+
+
+.hours-row span {
+    color: rgba(255, 255, 255, 0.85);
+}
+
+
+.hours-row strong {
+    color: #ffffff;
+
+    text-align: right;
+}
+
+
+/* =========================================================
+   LOGO MEANING
+   ========================================================= */
+
+.logo-meaning-section {
+    padding: 70px 0;
+
+    background: #f7f7f2;
+}
+
+
+.logo-meaning-content {
+    display: flex;
+
+    align-items: center;
+
+    gap: 30px;
+
+    max-width: 850px;
+
+    margin: 0 auto;
+
+    padding: 35px;
+
+    background: #ffffff;
+
+    border-radius: 16px;
+
+    border-left: 5px solid #a51621;
+
+    box-shadow:
+        0 7px 22px rgba(0, 0, 0, 0.07);
+}
+
+
+.logo-meaning-icon {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    min-width: 75px;
+
+    height: 75px;
+
+    border-radius: 50%;
+
+    background: #063f29;
+
+    color: #ffffff;
+
+    font-size: 2rem;
+}
+
+
+.logo-meaning-content h2 {
+    color: #063f29;
+
+    margin: 10px 0;
+}
+
+
+.logo-meaning-content p {
+    color: #666;
+
+    line-height: 1.7;
+
+    margin: 0;
+}
+
+
+/* =========================================================
+   CONTACT / FACEBOOK
+   ========================================================= */
+
+.about-contact-section {
+    padding: 75px 0;
+
+    background: #ffffff;
+
+    text-align: center;
+}
+
+
+.about-contact-card {
+    max-width: 750px;
+
+    margin: 0 auto;
+
+    padding: 50px 30px;
+
+    border-radius: 18px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #f7f7f2,
+            #ffffff
+        );
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.07);
+}
+
+
+.about-contact-card h2 {
+    color: #063f29;
+
+    margin: 12px 0 15px;
+}
+
+
+.about-contact-card p {
+    max-width: 600px;
+
+    margin: 0 auto 25px;
+
+    color: #666;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   FINAL ABOUT CTA
+   ========================================================= */
+
+.about-final-cta {
+    padding: 70px 0;
+
+    background:
+        linear-gradient(
+            rgba(0, 75, 45, 0.94),
+            rgba(0, 75, 45, 0.94)
+        );
+
+    color: #ffffff;
+
+    text-align: center;
+}
+
+
+.about-final-cta .cta-content {
+    max-width: 750px;
+
+    margin: 0 auto;
+}
+
+
+.about-final-cta h2 {
+    color: #ffffff;
+
+    margin: 12px 0 15px;
+}
+
+
+.about-final-cta p {
+    color: rgba(255, 255, 255, 0.88);
+
+    line-height: 1.7;
+
+    margin-bottom: 25px;
+}
+
+
+/* =========================================================
+   ABOUT PAGE RESPONSIVENESS
+   ========================================================= */
+
+@media (max-width: 1000px) {
+
+    .branches-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+
+    .mission-grid,
+    .offer-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+}
+
+
+@media (max-width: 850px) {
+
+    .about-story-grid {
+        grid-template-columns: 1fr;
+
+        gap: 35px;
+    }
+
+
+    .opening-hours-card {
+        grid-template-columns: 1fr;
+
+        gap: 30px;
+    }
+
+}
+
+
+@media (max-width: 650px) {
+
+    .about-story-section,
+    .mission-section,
+    .what-we-offer-section,
+    .branches-section,
+    .opening-hours-section,
+    .logo-meaning-section,
+    .about-contact-section {
+        padding: 55px 0;
+    }
+
+
+    .mission-grid,
+    .offer-grid,
+    .branches-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .about-highlight-card {
+        padding: 35px 25px;
+    }
+
+
+    .mission-card,
+    .offer-card {
+        padding: 30px 22px;
+    }
+
+
+    .branch-card p {
+        min-height: auto;
+    }
+
+
+    .opening-hours-card {
+        padding: 30px 20px;
+    }
+
+
+    .hours-row {
+        flex-direction: column;
+
+        gap: 5px;
+    }
+
+
+    .hours-row strong {
+        text-align: left;
+    }
+
+
+    .logo-meaning-content {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        padding: 28px 22px;
+    }
+
+
+    .about-contact-card {
+        padding: 40px 20px;
+    }
+
+}

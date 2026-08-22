@@ -1,11 +1,10 @@
 /* =========================================================
    NKHUNGUDZU BOOKSHOP
    MAIN JAVASCRIPT
-   PHASE 4
    ========================================================= */
 
 /* =========================================================
-   MOBILE NAVIGATION
+   1. MOBILE NAVIGATION
    ========================================================= */
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -54,10 +53,13 @@ document.addEventListener("DOMContentLoaded", function () {
   const slideshow = document.querySelector(".hero-slideshow");
 
   let currentSlide = 0;
+
   let slideshowTimer;
+
   let slideshowPaused = false;
 
   console.log("Number of slides found:", slides.length);
+
   console.log("Number of dots found:", dots.length);
 
   /* ---------------------------------------------------------
@@ -189,164 +191,167 @@ document.addEventListener("DOMContentLoaded", function () {
    3. PUBLISHING SERVICES POPUP
    ========================================================= */
 
-const publishingPopup = document.querySelector("#publishingPopup");
+document.addEventListener("DOMContentLoaded", function () {
+  const publishingPopup = document.querySelector("#publishingPopup");
 
-const popupClose = document.querySelector(".popup-close");
+  const popupClose = document.querySelector(".popup-close");
 
-/* ---------------------------------------------------------
-   Close popup
-   --------------------------------------------------------- */
+  /* ---------------------------------------------------------
+       CLOSE POPUP
+       --------------------------------------------------------- */
 
-if (popupClose && publishingPopup) {
-  popupClose.addEventListener("click", function () {
+  if (popupClose && publishingPopup) {
+    popupClose.addEventListener("click", function () {
+      publishingPopup.style.display = "none";
+    });
+  }
+
+  /* ---------------------------------------------------------
+       SHOW POPUP AFTER 3 SECONDS
+       --------------------------------------------------------- */
+
+  if (publishingPopup) {
     publishingPopup.style.display = "none";
-  });
-}
 
-/* ---------------------------------------------------------
-   Automatically show popup after 3 seconds
-   --------------------------------------------------------- */
-
-if (publishingPopup) {
-  publishingPopup.style.display = "none";
-
-  setTimeout(function () {
-    publishingPopup.style.display = "flex";
-  }, 3000);
-}
+    setTimeout(function () {
+      publishingPopup.style.display = "flex";
+    }, 3000);
+  }
+});
 
 /* =========================================================
    4. FEATURED PRODUCTS
    ========================================================= */
 
-const featuredProducts = document.querySelector("#featuredProducts");
+document.addEventListener("DOMContentLoaded", function () {
+  const featuredProducts = document.querySelector("#featuredProducts");
 
-const products = [
-  {
-    name: "Excel & Succeed Books",
-    category: "Secondary Textbooks",
-    brand: "Excel / Succeed",
-    image: "images/books/excel-succeed.jpg",
-  },
+  const products = [
+    {
+      name: "Excel & Succeed Books",
+      category: "Secondary Textbooks",
+      brand: "Excel / Succeed",
+      image: "images/books/excel-succeed.jpg",
+    },
 
-  {
-    name: "Primary School Textbooks",
-    category: "Primary Books",
-    brand: "Nkhungudzu Bookshop",
-    image: "images/books/primary-books.jpg",
-  },
+    {
+      name: "Primary School Textbooks",
+      category: "Primary Books",
+      brand: "Nkhungudzu Bookshop",
+      image: "images/books/primary-books.jpg",
+    },
 
-  {
-    name: "Bibles",
-    category: "Spiritual Literature",
-    brand: "NIV / KJV / NKJV",
-    image: "images/bibles/bibles.jpg",
-  },
+    {
+      name: "Bibles",
+      category: "Spiritual Literature",
+      brand: "NIV / KJV / NKJV",
+      image: "images/bibles/bibles.jpg",
+    },
 
-  {
-    name: "School & Office Stationery",
-    category: "Stationery",
-    brand: "Various Products",
-    image: "images/stationery/stationery.jpg",
-  },
-];
+    {
+      name: "School & Office Stationery",
+      category: "Stationery",
+      brand: "Various Products",
+      image: "images/stationery/stationery.jpg",
+    },
+  ];
 
-function displayProducts() {
-  if (!featuredProducts) {
-    return;
+  function displayProducts() {
+    if (!featuredProducts) {
+      return;
+    }
+
+    featuredProducts.innerHTML = "";
+
+    products.forEach(function (product) {
+      const productCard = document.createElement("article");
+
+      productCard.classList.add("product-card");
+
+      productCard.innerHTML = `
+
+                    <div class="product-image">
+
+                        <img
+                            src="${product.image}"
+                            alt="${product.name}"
+                            loading="lazy"
+                        >
+
+                    </div>
+
+
+                    <div class="product-info">
+
+                        <span class="product-category">
+                            ${product.category}
+                        </span>
+
+
+                        <h3>
+                            ${product.name}
+                        </h3>
+
+
+                        <p class="product-brand">
+                            ${product.brand}
+                        </p>
+
+                    </div>
+
+                `;
+
+      featuredProducts.appendChild(productCard);
+    });
   }
 
-  featuredProducts.innerHTML = "";
-
-  products.forEach(function (product) {
-    const productCard = document.createElement("article");
-
-    productCard.classList.add("product-card");
-
-    productCard.innerHTML = `
-
-            <div class="product-image">
-
-                <img
-                    src="${product.image}"
-                    alt="${product.name}"
-                    loading="lazy"
-                >
-
-            </div>
-
-
-            <div class="product-info">
-
-                <span class="product-category">
-                    ${product.category}
-                </span>
-
-                <h3>
-                    ${product.name}
-                </h3>
-
-                <p class="product-brand">
-                    ${product.brand}
-                </p>
-
-            </div>
-
-        `;
-
-    featuredProducts.appendChild(productCard);
-  });
-}
-
-displayProducts();
+  displayProducts();
+});
 
 /* =========================================================
    5. BASIC SEARCH
    ========================================================= */
 
-const searchInput = document.querySelector(".header-search input");
+document.addEventListener("DOMContentLoaded", function () {
+  const searchInput = document.querySelector(".header-search input");
 
-const searchButton = document.querySelector(".header-search button");
+  const searchButton = document.querySelector(".header-search button");
 
-function performSearch() {
-  if (!searchInput) {
-    return;
-  }
-
-  const searchTerm = searchInput.value.trim();
-
-  if (searchTerm === "") {
-    alert("Please enter something to search for.");
-
-    return;
-  }
-
-  /*
-       The full product search system will be
-       connected to the Price List page later.
-    */
-
-  alert(
-    'Search for "' + searchTerm + '" will be available on the Price List page.',
-  );
-}
-
-if (searchButton) {
-  searchButton.addEventListener("click", performSearch);
-}
-
-if (searchInput) {
-  searchInput.addEventListener("keydown", function (event) {
-    if (event.key === "Enter") {
-      performSearch();
+  function performSearch() {
+    if (!searchInput) {
+      return;
     }
-  });
-}
+
+    const searchTerm = searchInput.value.trim();
+
+    if (searchTerm === "") {
+      alert("Please enter something to search for.");
+
+      return;
+    }
+
+    alert(
+      'Search for "' +
+        searchTerm +
+        '" will be available on the Price List page.',
+    );
+  }
+
+  if (searchButton) {
+    searchButton.addEventListener("click", performSearch);
+  }
+
+  if (searchInput) {
+    searchInput.addEventListener("keydown", function (event) {
+      if (event.key === "Enter") {
+        performSearch();
+      }
+    });
+  }
+});
 
 /* =========================================================
    6. INITIALISE WEBSITE
    ========================================================= */
-
-showSlide(0);
 
 console.log("Nkhungudzu Bookshop website loaded successfully.");
