@@ -1,27 +1,34 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
 
-<head>
-
-    <meta charset="UTF-8">
-
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
-    <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/images/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/images/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/images/favicon/favicon-16x16.png"
+    />
     <link rel="manifest" href="/images/favicon/site.webmanifest" />
 
     <title>Books | Nkhungudzu Bookshop</title>
 
-    <link rel="stylesheet"
-          href="../css/style.css">
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
 
-</head>
-
-
-<body>
-
+  <body>
     <!-- =====================================================
          TOP INFORMATION BAR
          ===================================================== -->
@@ -34,7 +41,12 @@
 
         <div class="top-social">
           <span>Follow us:</span>
-          <a href="#" target="_blank">Facebook</a>
+          <a
+            href="https://web.facebook.com/profile.php?id=61586023103284"
+            target="_blank"
+            rel="noopener"
+            >Facebook &rightarrow;</a
+          >
         </div>
       </div>
     </div>
@@ -101,530 +113,334 @@
       </div>
     </nav>
 
-
     <!-- =====================================================
          PAGE HERO
          ===================================================== -->
 
     <main>
+      <section class="page-hero">
+        <div class="container">
+          <span class="hero-label"> NKHUNGUDZU BOOKSHOP </span>
 
-        <section class="page-hero">
+          <h1>Our Books</h1>
 
-            <div class="container">
+          <p>
+            Quality educational and literary resources for learners, teachers
+            and readers.
+          </p>
+        </div>
+      </section>
 
-                <span class="hero-label">
-                    NKHUNGUDZU BOOKSHOP
-                </span>
-
-                <h1>
-                    Our Books
-                </h1>
-
-                <p>
-                    Quality educational and literary resources
-                    for learners, teachers and readers.
-                </p>
-
-            </div>
-
-        </section>
-
-
-        <!-- =================================================
+      <!-- =================================================
              BOOK INTRODUCTION
              ================================================= -->
 
-        <section class="content-section">
+      <section class="content-section">
+        <div class="container">
+          <div class="section-heading">
+            <span class="section-label"> EDUCATION MADE SIMPLE </span>
 
-            <div class="container">
+            <h2>Books For Every Learner</h2>
 
-                <div class="section-heading">
+            <p>
+              Discover a wide selection of primary and secondary school
+              textbooks, literature, dictionaries and teacher's guides.
+            </p>
+          </div>
 
-                    <span class="section-label">
-                        EDUCATION MADE SIMPLE
-                    </span>
-
-                    <h2>
-                        Books For Every Learner
-                    </h2>
-
-                    <p>
-                        Discover a wide selection of primary and
-                        secondary school textbooks, literature,
-                        dictionaries and teacher's guides.
-                    </p>
-
-                </div>
-
-
-                <!-- =========================================
+          <!-- =========================================
                      CATEGORY FILTERS
                      ========================================= -->
 
-                <div class="book-filters">
+          <div class="book-filters">
+            <button
+              class="book-filter active"
+              type="button"
+              data-category="all"
+            >
+              All Books
+            </button>
 
-                    <button
-                        class="book-filter active"
-                        type="button"
-                        data-category="all">
+            <button class="book-filter" type="button" data-category="primary">
+              Primary Books
+            </button>
 
-                        All Books
+            <button class="book-filter" type="button" data-category="secondary">
+              Secondary Books
+            </button>
 
-                    </button>
+            <button
+              class="book-filter"
+              type="button"
+              data-category="literature"
+            >
+              Literature
+            </button>
 
+            <button
+              class="book-filter"
+              type="button"
+              data-category="dictionaries"
+            >
+              Dictionaries
+            </button>
 
-                    <button
-                        class="book-filter"
-                        type="button"
-                        data-category="primary">
+            <button class="book-filter" type="button" data-category="teachers">
+              Teacher's Guides
+            </button>
+          </div>
 
-                        Primary Books
-
-                    </button>
-
-
-                    <button
-                        class="book-filter"
-                        type="button"
-                        data-category="secondary">
-
-                        Secondary Books
-
-                    </button>
-
-
-                    <button
-                        class="book-filter"
-                        type="button"
-                        data-category="literature">
-
-                        Literature
-
-                    </button>
-
-
-                    <button
-                        class="book-filter"
-                        type="button"
-                        data-category="dictionaries">
-
-                        Dictionaries
-
-                    </button>
-
-
-                    <button
-                        class="book-filter"
-                        type="button"
-                        data-category="teachers">
-
-                        Teacher's Guides
-
-                    </button>
-
-                </div>
-
-
-                <!-- =========================================
+          <!-- =========================================
                      BOOK COLLECTION
                      ========================================= -->
 
-                <div class="books-grid">
+          <div class="books-grid">
+            <!-- PRIMARY BOOKS -->
 
+            <article class="book-category-card" data-category="primary">
+              <div class="book-card-icon">📚</div>
 
-                    <!-- PRIMARY BOOKS -->
+              <div class="book-card-content">
+                <span class="book-card-label"> PRIMARY EDUCATION </span>
 
-                    <article
-                        class="book-category-card"
-                        data-category="primary">
+                <h3>Primary School Books</h3>
 
-                        <div class="book-card-icon">
-                            📚
-                        </div>
+                <p>
+                  Textbooks for Standard 1 to Standard 8 covering subjects
+                  including English, Mathematics, Chichewa, Science,
+                  Agriculture, Bible Knowledge and more.
+                </p>
 
-                        <div class="book-card-content">
+                <a href="pricelist.html" class="text-link"> View Prices → </a>
+              </div>
+            </article>
 
-                            <span class="book-card-label">
-                                PRIMARY EDUCATION
-                            </span>
+            <!-- SECONDARY BOOKS -->
 
-                            <h3>
-                                Primary School Books
-                            </h3>
+            <article class="book-category-card" data-category="secondary">
+              <div class="book-card-icon">🎓</div>
 
-                            <p>
-                                Textbooks for Standard 1 to
-                                Standard 8 covering subjects
-                                including English, Mathematics,
-                                Chichewa, Science, Agriculture,
-                                Bible Knowledge and more.
-                            </p>
+              <div class="book-card-content">
+                <span class="book-card-label"> SECONDARY EDUCATION </span>
 
-                            <a href="pricelist.html"
-                               class="text-link">
+                <h3>Secondary Textbooks</h3>
 
-                                View Prices →
+                <p>
+                  Educational books for JCE and MSCE learners from trusted
+                  publishers and brands.
+                </p>
 
-                            </a>
+                <p class="publisher-list">
+                  Target • Arise • Excel / Succeed • Achievers • Jhango •
+                  Strides • Chanco • Better Future • Giant and more.
+                </p>
 
-                        </div>
+                <a href="pricelist.html" class="text-link"> View Prices → </a>
+              </div>
+            </article>
 
-                    </article>
+            <!-- LITERATURE -->
 
+            <article class="book-category-card" data-category="literature">
+              <div class="book-card-icon">📖</div>
 
-                    <!-- SECONDARY BOOKS -->
+              <div class="book-card-content">
+                <span class="book-card-label"> LITERATURE </span>
 
-                    <article
-                        class="book-category-card"
-                        data-category="secondary">
+                <h3>Literature Books</h3>
 
-                        <div class="book-card-icon">
-                            🎓
-                        </div>
+                <p>
+                  English and Chichewa literature including novels, plays, short
+                  stories and other recommended reading materials.
+                </p>
 
-                        <div class="book-card-content">
+                <p class="publisher-list">
+                  Macbeth • The Pearl • African Short Stories • Bwampini •
+                  Nthondo and more.
+                </p>
 
-                            <span class="book-card-label">
-                                SECONDARY EDUCATION
-                            </span>
+                <a href="pricelist.html" class="text-link"> View Prices → </a>
+              </div>
+            </article>
 
-                            <h3>
-                                Secondary Textbooks
-                            </h3>
+            <!-- DICTIONARIES -->
 
-                            <p>
-                                Educational books for JCE and
-                                MSCE learners from trusted
-                                publishers and brands.
-                            </p>
+            <article class="book-category-card" data-category="dictionaries">
+              <div class="book-card-icon">📕</div>
 
-                            <p class="publisher-list">
+              <div class="book-card-content">
+                <span class="book-card-label"> REFERENCE BOOKS </span>
 
-                                Target • Arise • Excel / Succeed
-                                • Achievers • Jhango • Strides
-                                • Chanco • Better Future
-                                • Giant and more.
+                <h3>Dictionaries &amp; Other Books</h3>
 
-                            </p>
+                <p>
+                  Build your vocabulary and improve your language skills with a
+                  variety of dictionaries and reference books.
+                </p>
 
-                            <a href="pricelist.html"
-                               class="text-link">
+                <p class="publisher-list">Oxford • Cambridge and more.</p>
 
-                                View Prices →
+                <a href="pricelist.html" class="text-link"> View Prices → </a>
+              </div>
+            </article>
 
-                            </a>
+            <!-- TEACHER'S GUIDES -->
 
-                        </div>
+            <article class="book-category-card" data-category="teachers">
+              <div class="book-card-icon">👩🏽‍🏫</div>
 
-                    </article>
+              <div class="book-card-content">
+                <span class="book-card-label"> FOR EDUCATORS </span>
 
+                <h3>Teacher's Guides</h3>
 
-                    <!-- LITERATURE -->
+                <p>
+                  Primary and secondary teacher's guides designed to support
+                  educators in lesson preparation and classroom teaching.
+                </p>
 
-                    <article
-                        class="book-category-card"
-                        data-category="literature">
+                <a href="pricelist.html" class="text-link"> View Prices → </a>
+              </div>
+            </article>
 
-                        <div class="book-card-icon">
-                            📖
-                        </div>
+            <!-- MADE SIMPLE -->
 
-                        <div class="book-card-content">
+            <article class="book-category-card" data-category="secondary">
+              <div class="book-card-icon">✏️</div>
 
-                            <span class="book-card-label">
-                                LITERATURE
-                            </span>
+              <div class="book-card-content">
+                <span class="book-card-label"> STUDY GUIDES </span>
 
-                            <h3>
-                                Literature Books
-                            </h3>
+                <h3>Made Simple Books</h3>
 
-                            <p>
-                                English and Chichewa literature
-                                including novels, plays,
-                                short stories and other
-                                recommended reading materials.
-                            </p>
+                <p>
+                  Revision and study materials including JCE and MSCE guides for
+                  different subjects.
+                </p>
 
-                            <p class="publisher-list">
+                <a href="pricelist.html" class="text-link"> View Prices → </a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
 
-                                Macbeth • The Pearl • African
-                                Short Stories • Bwampini
-                                • Nthondo and more.
-
-                            </p>
-
-                            <a href="pricelist.html"
-                               class="text-link">
-
-                                View Prices →
-
-                            </a>
-
-                        </div>
-
-                    </article>
-
-
-                    <!-- DICTIONARIES -->
-
-                    <article
-                        class="book-category-card"
-                        data-category="dictionaries">
-
-                        <div class="book-card-icon">
-                            📕
-                        </div>
-
-                        <div class="book-card-content">
-
-                            <span class="book-card-label">
-                                REFERENCE BOOKS
-                            </span>
-
-                            <h3>
-                                Dictionaries &amp; Other Books
-                            </h3>
-
-                            <p>
-                                Build your vocabulary and
-                                improve your language skills
-                                with a variety of dictionaries
-                                and reference books.
-                            </p>
-
-                            <p class="publisher-list">
-
-                                Oxford • Cambridge and more.
-
-                            </p>
-
-                            <a href="pricelist.html"
-                               class="text-link">
-
-                                View Prices →
-
-                            </a>
-
-                        </div>
-
-                    </article>
-
-
-                    <!-- TEACHER'S GUIDES -->
-
-                    <article
-                        class="book-category-card"
-                        data-category="teachers">
-
-                        <div class="book-card-icon">
-                            👩🏽‍🏫
-                        </div>
-
-                        <div class="book-card-content">
-
-                            <span class="book-card-label">
-                                FOR EDUCATORS
-                            </span>
-
-                            <h3>
-                                Teacher's Guides
-                            </h3>
-
-                            <p>
-                                Primary and secondary teacher's
-                                guides designed to support
-                                educators in lesson preparation
-                                and classroom teaching.
-                            </p>
-
-                            <a href="pricelist.html"
-                               class="text-link">
-
-                                View Prices →
-
-                            </a>
-
-                        </div>
-
-                    </article>
-
-
-                    <!-- MADE SIMPLE -->
-
-                    <article
-                        class="book-category-card"
-                        data-category="secondary">
-
-                        <div class="book-card-icon">
-                            ✏️
-                        </div>
-
-                        <div class="book-card-content">
-
-                            <span class="book-card-label">
-                                STUDY GUIDES
-                            </span>
-
-                            <h3>
-                                Made Simple Books
-                            </h3>
-
-                            <p>
-                                Revision and study materials
-                                including JCE and MSCE guides
-                                for different subjects.
-                            </p>
-
-                            <a href="pricelist.html"
-                               class="text-link">
-
-                                View Prices →
-
-                            </a>
-
-                        </div>
-
-                    </article>
-
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- =================================================
+      <!-- =================================================
              CALL TO ACTION
              ================================================= -->
 
-        <section class="book-cta">
+      <section class="book-cta">
+        <div class="container">
+          <div class="cta-content">
+            <span class="section-label"> FIND WHAT YOU NEED </span>
 
-            <div class="container">
+            <h2>Looking for a Specific Book?</h2>
 
-                <div class="cta-content">
+            <p>
+              Check our price list for available titles and prices or visit one
+              of our four branches.
+            </p>
 
-                    <span class="section-label">
-                        FIND WHAT YOU NEED
-                    </span>
+            <div class="cta-buttons">
+              <a href="pricelist.html" class="btn btn-primary">
+                View Price List
+              </a>
 
-                    <h2>
-                        Looking for a Specific Book?
-                    </h2>
-
-                    <p>
-                        Check our price list for available
-                        titles and prices or visit one of
-                        our four branches.
-                    </p>
-
-                    <div class="cta-buttons">
-
-                        <a
-                            href="pricelist.html"
-                            class="btn btn-primary">
-
-                            View Price List
-
-                        </a>
-
-
-                        <a
-                            href="about.html"
-                            class="btn btn-secondary">
-
-                            Find Our Shops
-
-                        </a>
-
-                    </div>
-
-                </div>
-
+              <a href="about.html" class="btn btn-secondary">
+                Find Our Shops
+              </a>
             </div>
-
-        </section>
-
+          </div>
+        </div>
+      </section>
     </main>
-
 
     <!-- =====================================================
          FOOTER
          ===================================================== -->
 
-    <footer class="site-footer">
+    <footer class="main-footer">
+      <div class="container footer-grid">
+        <!-- Company -->
+        <div class="footer-column">
+          <img
+            src="../images/logo.jpg"
+            alt="Nkhungudzu bookshop logo"
+            class="footer-logo"
+          />
 
-        <div class="container">
+          <p>
+            <strong>Education Made Simple.</strong>
+          </p>
 
-            <div class="footer-content">
-
-                <div>
-
-                    <h3>
-                        Nkhungudzu Bookshop
-                    </h3>
-
-                    <p>
-                        Education Made Simple.
-                    </p>
-
-                </div>
-
-
-                <div>
-
-                    <h4>
-                        Quick Links
-                    </h4>
-
-                    <a href="../index.html">
-                        Home
-                    </a>
-
-                    <a href="pricelist.html">
-                        Price List
-                    </a>
-
-                    <a href="about.html">
-                        About Us
-                    </a>
-
-                </div>
-
-
-                <div>
-
-                    <h4>
-                        Contact
-                    </h4>
-
-                    <p>
-                        nkhungudzubookshop@gmail.com
-                    </p>
-
-                    <p>
-                        Limbe: 0998 184 070
-                    </p>
-
-                </div>
-
-            </div>
-
-
-            <div class="footer-bottom">
-
-                <p>
-                    &copy; 2026 Nkhungudzu Bookshop.
-                    All rights reserved.
-                </p>
-
-            </div>
-
+          <p>We've got your educational needs covered.</p>
         </div>
 
-    </footer>
+        <!-- Quick Links -->
+        <div class="footer-column">
+          <h3>Quick Links</h3>
 
+          <ul>
+            <li>
+              <a href="index.html">Home</a>
+            </li>
+
+            <li>
+              <a href="pages/about.html">About Us</a>
+            </li>
+
+            <li>
+              <a href="pages/books.html">Books</a>
+            </li>
+
+            <li>
+              <a href="pages/bibles.html"> Bibles & Song Books </a>
+            </li>
+
+            <li>
+              <a href="pages/stationery.html"> Stationery </a>
+            </li>
+
+            <li>
+              <a href="pages/pricelist.html"> Price List </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Contact -->
+        <div class="footer-column">
+          <h3>Contact Us</h3>
+
+          <p>📞 0998 184 070</p>
+
+          <p>✉️ nkhungudzubookshop@gmail.com</p>
+
+          <p>📍 Malawi</p>
+        </div>
+
+        <!-- Social -->
+        <div class="footer-column">
+          <h3>Follow Us</h3>
+
+          <p>Follow Nkhungudzu Bookshop on Facebook.</p>
+
+          <a
+            href="https://web.facebook.com/profile.php?id=61586023103284"
+            target="_blank"
+            rel="noopener"
+            >Facebook &rightarrow;</a
+          >
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="container">
+          <p>&copy; 2026 Nkhungudzu Bookshop. All Rights Reserved.</p>
+
+          <p>Education Made Simple</p>
+        </div>
+      </div>
+    </footer>
 
     <!-- =====================================================
          JAVASCRIPT
@@ -632,7 +448,5 @@
 
     <script src="../js/books.js"></script>
     <script src="../js/script.js"></script>
-
-</body>
-
+  </body>
 </html>

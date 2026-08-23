@@ -330,11 +330,8 @@ document.addEventListener("DOMContentLoaded", function () {
       return;
     }
 
-    alert(
-      'Search for "' +
-        searchTerm +
-        '" will be available on the Price List page.',
-    );
+    window.location.href =
+      "/pages/pricelist.html?search=" + encodeURIComponent(searchTerm);
   }
 
   if (searchButton) {

@@ -1753,6 +1753,18 @@ priceFilterButtons.forEach(function (button) {
 });
 
 /* =========================================================
+   APPLY SEARCH TERM FROM URL
+   ========================================================= */
+
+const urlParams = new URLSearchParams(window.location.search);
+
+const searchTermFromUrl = urlParams.get("search");
+
+if (searchTermFromUrl && priceSearchInput) {
+  priceSearchInput.value = searchTermFromUrl;
+}
+
+/* =========================================================
    INITIALISE PRICE LIST
    ========================================================= */
 
