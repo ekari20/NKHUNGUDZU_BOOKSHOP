@@ -37,6 +37,13 @@ let currentPriceCategory = "all";
 
 
 /* =========================================================
+   PRICE LIST PRODUCTS
+   ========================================================= */
+
+const priceListProducts = [];
+
+
+/* =========================================================
    CATEGORY NAMES
    ========================================================= */
 
@@ -655,7 +662,7 @@ function displayPrimaryBooks() {
 
                 button.setAttribute(
                     "aria-expanded",
-                    isOpen
+                    String(isOpen)
                 );
 
 
