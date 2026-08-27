@@ -1,0 +1,19 @@
+# Environment variables and secrets
+.env
+.env.local
+.env.*.local
+.env.*
+*.env
+test_supabase_connection.py
+
+# Operating System & IDE artifacts
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Dependencies
+node_modules/
+
+# Logs
+*.log

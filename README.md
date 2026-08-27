@@ -2,7 +2,7 @@
 
 ![NKHUNGUDZU Bookshop](images/screenshot/screenshot.jpeg)
 
-A modern online bookshop dedicated to selling school and religious books [live priview](https://nkhungudzu-bookshop-git-main-uuu-f21f.vercel.app/).
+A modern online bookshop dedicated to selling school and religious books [live preview](https://nkhungudzu-bookshop-git-main-uuu-f21f.vercel.app/).
 
 ## 📚 About
 
@@ -10,10 +10,10 @@ NKHUNGUDZU Bookshop is a web-based platform designed to provide easy access to e
 
 ## ✨ Features
 
-- **Browse Catalog** - Explore our collection of school and religious books
-- **Responsive Design** - Seamless experience across desktop, tablet, and mobile devices
-- **User-Friendly Interface** - Intuitive navigation and search functionality
-- **Product Management** - View detailed book descriptions and availability
+- **Browse Catalog** – Explore our collection of school and religious books
+- **Responsive Design** – Seamless experience across desktop, tablet, and mobile devices
+- **User-Friendly Interface** – Intuitive navigation and search functionality
+- **Product Management** – View detailed book descriptions and availability
 
 ## 🛠️ Technology Stack
 
@@ -39,7 +39,7 @@ NKHUNGUDZU_BOOKSHOP/
 ### Prerequisites
 
 - A modern web browser (Chrome, Firefox, Safari, Edge)
-- No installation required - runs directly in your browser
+- No installation required – runs directly in your browser
 
 ### Installation
 
