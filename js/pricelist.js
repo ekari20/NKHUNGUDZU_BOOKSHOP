@@ -1,4 +1,22 @@
 /* =========================================================
+   SUPABASE CONFIGURATION
+   ========================================================= */
+
+const SUPABASE_URL = "https://fxdappjsoaeastrcwrbv.supabase.co";
+const SUPABASE_ANON_KEY = "sb_publishable_zgAdFixqII98_VtHCIdyDQ_WLTrfoPm";
+
+let supabaseClient = null;
+
+if (typeof window !== "undefined" && window.supabase && typeof window.supabase.createClient === "function") {
+    try {
+        supabaseClient = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+    } catch (e) {
+        console.warn("Supabase client initialization warning:", e);
+    }
+}
+
+
+/* =========================================================
    PRICE LIST ELEMENTS
    ========================================================= */
 
@@ -38,9 +56,89 @@ let currentPriceCategory = "all";
 
 /* =========================================================
    PRICE LIST PRODUCTS
+   (populated from Supabase - see fetchProductsFromDatabase)
    ========================================================= */
 
-const priceListProducts = [];
+let priceListProducts = [];
+
+
+/* =========================================================
+   LOCAL CACHE (offline fallback only - used if the database
+   cannot be reached, not as a source of truth)
+   ========================================================= */
+
+function getLocalProducts() {
+    try {
+        const saved = localStorage.getItem("nkhungudzuProducts");
+        if (saved) {
+            return JSON.parse(saved);
+        }
+    } catch (e) {
+        console.error("Error reading cached products:", e);
+    }
+    return null;
+}
+
+function saveLocalProducts(products) {
+    try {
+        localStorage.setItem("nkhungudzuProducts", JSON.stringify(products));
+    } catch (e) {
+        console.error("Error caching products locally:", e);
+    }
+}
+
+
+/* =========================================================
+   FETCH PRODUCTS FROM DATABASE (SUPABASE)
+   ========================================================= */
+
+async function fetchProductsFromDatabase() {
+    // 1. Try fetching via Supabase JS client
+    if (supabaseClient) {
+        try {
+            const { data, error } = await supabaseClient
+                .from("products")
+                .select("*")
+                .eq("available", true)
+                .order("category", { ascending: true })
+                .order("name", { ascending: true });
+
+            if (!error && Array.isArray(data) && data.length > 0) {
+                saveLocalProducts(data);
+                return data;
+            }
+        } catch (err) {
+            console.warn("Supabase client query failed, falling back to REST API:", err);
+        }
+    }
+
+    // 2. Direct Supabase REST API fetch
+    try {
+        const response = await fetch(
+            `${SUPABASE_URL}/rest/v1/products?available=eq.true&order=category.asc,name.asc`,
+            {
+                headers: {
+                    apikey: SUPABASE_ANON_KEY,
+                    Authorization: `Bearer ${SUPABASE_ANON_KEY}`,
+                    "Content-Type": "application/json"
+                }
+            }
+        );
+
+        if (response.ok) {
+            const data = await response.json();
+            if (Array.isArray(data) && data.length > 0) {
+                saveLocalProducts(data);
+                return data;
+            }
+        }
+    } catch (err) {
+        console.warn("Supabase REST query failed, using local cached products:", err);
+    }
+
+    // 3. Fallback to last-known cached products if network is unreachable
+    return getLocalProducts();
+}
 
 
 /* =========================================================
@@ -63,7 +161,9 @@ const categoryNames = {
 
     "primary-teacher": "Primary Teacher's Guide",
 
-    spiritual: "Spiritual Literature"
+    spiritual: "Spiritual Literature",
+
+    stationery: "Stationery"
 
 };
 
@@ -86,6 +186,22 @@ function formatPrice(price) {
     if (typeof price === "string") {
 
         const cleanPrice = price.trim();
+
+        /*
+         * Supabase/Postgres NUMERIC columns are serialized as
+         * plain numeric strings (e.g. "35000.00"). Format those
+         * the same way as a real number, dropping decimals.
+         */
+        if (
+            cleanPrice !== "" &&
+            !cleanPrice.toUpperCase().startsWith("K") &&
+            !cleanPrice.includes("-") &&
+            !isNaN(Number(cleanPrice))
+        ) {
+
+            return "K" + Number(cleanPrice).toLocaleString();
+
+        }
 
         /*
          * If the price already contains K,
@@ -187,7 +303,7 @@ function displayPriceProducts() {
                 " " +
                 (product.description || "") +
                 " " +
-                (product.publisher || "") +
+                (product.brand || "") +
                 " " +
                 getCategoryName(product.category)
 
@@ -227,7 +343,8 @@ function displayPriceProducts() {
 
         if (noPriceResults) {
 
-            noPriceResults.style.display = "block";
+            noPriceResults.style.display =
+                priceListProducts.length === 0 ? "none" : "block";
 
         }
 
@@ -287,7 +404,7 @@ function displayPriceProducts() {
 
                     <strong>Publisher:</strong>
 
-                    ${product.publisher || "Various"}
+                    ${product.brand || "Various"}
 
                 </p>
 
@@ -461,35 +578,38 @@ function displayPrimaryBooks() {
 
     /* Create a card for every standard */
 
-    primaryBooks.forEach(function (standard) {
+    primaryStandards.forEach(function (standard) {
 
         const card =
             document.createElement("article");
 
 
         card.className =
-            "primary-book-card";
+            "primary-standard-card";
 
 
-        let subjectsHTML = "";
+        const subjectCount =
+            standard.subjects.length;
 
 
         /* =================================================
-           CREATE SUBJECT LIST
+           SUBJECT ROWS
            ================================================= */
+
+        let subjectsHTML = "";
 
         standard.subjects.forEach(function (subject) {
 
             subjectsHTML += `
 
-                <div class="primary-subject">
+                <div class="subject-row">
 
                     <span>
                         ${subject.name}
                     </span>
 
                     <strong>
-                        K${subject.price.toLocaleString()}
+                        ${formatPrice(subject.price)}
                     </strong>
 
                 </div>
@@ -505,19 +625,19 @@ function displayPrimaryBooks() {
 
         let packageHTML = `
 
-            <div class="primary-package core-package">
+            <div class="package core-package">
 
                 <span>
-                    Core Package
+                    CORE PACKAGE
                 </span>
 
                 <strong>
-                    K${standard.coreTotal.toLocaleString()}
+                    ${formatPrice(standard.coreTotal)}
                 </strong>
 
-                <small>
-                    Includes Bible Knowledge
-                </small>
+                <p>
+                    ${standard.coreNote || ""}
+                </p>
 
             </div>
 
@@ -535,19 +655,19 @@ function displayPrimaryBooks() {
 
             packageHTML += `
 
-                <div class="primary-package complete-package">
+                <div class="package complete-package">
 
                     <span>
-                        Complete Package
+                        COMPLETE PACKAGE
                     </span>
 
                     <strong>
-                        K${standard.completeTotal.toLocaleString()}
+                        ${formatPrice(standard.completeTotal)}
                     </strong>
 
-                    <small>
-                        Includes Religious Education
-                    </small>
+                    <p>
+                        ${standard.completeNote || ""}
+                    </p>
 
                 </div>
 
@@ -562,55 +682,46 @@ function displayPrimaryBooks() {
 
         card.innerHTML = `
 
-            <div class="primary-card-header">
+            <div class="standard-header">
 
-                <span>
-                    PRIMARY TEXTBOOKS
+                <span class="standard-label">
+                    PRIMARY
                 </span>
 
                 <h3>
                     ${standard.standard}
                 </h3>
 
+                <p>
+                    ${subjectCount} textbook${subjectCount === 1 ? "" : "s"}
+                </p>
+
             </div>
 
 
-            <div class="primary-card-body">
+            <div class="package-container">
 
-                <button
-                    type="button"
-                    class="subjects-toggle"
-                    aria-expanded="false"
-                >
+                ${packageHTML}
 
-                    View Subjects
-
-                    <span class="toggle-icon">
-                        +
-                    </span>
-
-                </button>
+            </div>
 
 
-                <div class="primary-subjects">
+            <button
+                type="button"
+                class="subjects-toggle"
+                aria-expanded="false"
+            >
 
-                    ${subjectsHTML}
+                View Subjects
 
-                </div>
+                <span>▼</span>
 
-
-                <div class="primary-packages">
-
-                    ${packageHTML}
-
-                </div>
+            </button>
 
 
-                <p class="primary-book-note">
+            <div class="subjects-list" style="display: none;">
 
-                    ${standard.note}
-
-                </p>
+                ${subjectsHTML}
 
             </div>
 
@@ -640,7 +751,7 @@ function displayPrimaryBooks() {
 
                 const card =
                     button.closest(
-                        ".primary-book-card"
+                        ".primary-standard-card"
                     );
 
 
@@ -649,48 +760,38 @@ function displayPrimaryBooks() {
                 }
 
 
-                /* Open / close card */
+                const subjectsList =
+                    card.querySelector(".subjects-list");
 
-                card.classList.toggle("open");
 
+                if (!subjectsList) {
+                    return;
+                }
+
+
+                /* Open / close subject list */
 
                 const isOpen =
-                    card.classList.contains("open");
+                    subjectsList.style.display === "block";
+
+                subjectsList.style.display =
+                    isOpen ? "none" : "block";
 
 
                 /* Update accessibility */
 
                 button.setAttribute(
                     "aria-expanded",
-                    String(isOpen)
+                    String(!isOpen)
                 );
 
 
                 /* Change button text */
 
-                if (isOpen) {
-
-                    button.innerHTML =
-                        `
-                        Hide Subjects
-
-                        <span class="toggle-icon">
-                            −
-                        </span>
-                        `;
-
-                } else {
-
-                    button.innerHTML =
-                        `
-                        View Subjects
-
-                        <span class="toggle-icon">
-                            +
-                        </span>
-                        `;
-
-                }
+                button.innerHTML =
+                    isOpen
+                        ? "View Subjects <span>▼</span>"
+                        : "Hide Subjects <span>▲</span>";
 
             }
         );
@@ -699,24 +800,239 @@ function displayPrimaryBooks() {
 
 }
 
+
 /* =========================================================
-   INITIALISE PRICE LIST
+   LOCAL CACHE FOR PRIMARY STANDARDS (offline fallback)
    ========================================================= */
 
-if (priceListContainer) {
+function getLocalPrimaryStandards() {
+    try {
+        const saved = localStorage.getItem("nkhungudzuPrimaryStandards");
+        if (saved) {
+            return JSON.parse(saved);
+        }
+    } catch (e) {
+        console.error("Error reading cached primary standards:", e);
+    }
+    return null;
+}
+
+function saveLocalPrimaryStandards(standards) {
+    try {
+        localStorage.setItem("nkhungudzuPrimaryStandards", JSON.stringify(standards));
+    } catch (e) {
+        console.error("Error caching primary standards locally:", e);
+    }
+}
+
+
+/* =========================================================
+   FETCH PRIMARY STANDARDS FROM DATABASE (SUPABASE)
+   ========================================================= */
+
+async function fetchPrimaryStandardsFromDatabase() {
+
+    // 1. Try fetching via Supabase JS client, with subjects embedded
+    if (supabaseClient) {
+        try {
+            const { data, error } = await supabaseClient
+                .from("primary_standards")
+                .select("*, primary_subjects(*)")
+                .order("sort_order", { ascending: true })
+                .order("sort_order", { ascending: true, foreignTable: "primary_subjects" });
+
+            if (!error && Array.isArray(data) && data.length > 0) {
+                saveLocalPrimaryStandards(data);
+                return data;
+            }
+        } catch (err) {
+            console.warn("Supabase client query failed, falling back to REST API:", err);
+        }
+    }
+
+    // 2. Direct Supabase REST API fetch (embedded resource + nested order)
+    try {
+        const response = await fetch(
+            `${SUPABASE_URL}/rest/v1/primary_standards?select=*,primary_subjects(*)&order=sort_order.asc&primary_subjects.order=sort_order.asc`,
+            {
+                headers: {
+                    apikey: SUPABASE_ANON_KEY,
+                    Authorization: `Bearer ${SUPABASE_ANON_KEY}`,
+                    "Content-Type": "application/json"
+                }
+            }
+        );
+
+        if (response.ok) {
+            const data = await response.json();
+            if (Array.isArray(data) && data.length > 0) {
+                saveLocalPrimaryStandards(data);
+                return data;
+            }
+        }
+    } catch (err) {
+        console.warn("Supabase REST query failed, using local cached primary standards:", err);
+    }
+
+    // 3. Fallback to last-known cached primary standards if network is unreachable
+    return getLocalPrimaryStandards();
+}
+
+
+/* =========================================================
+   NORMALISE DATABASE ROWS INTO DISPLAY SHAPE
+   ========================================================= */
+
+function normalizePrimaryStandards(rows) {
+
+    return rows.map(function (row) {
+
+        const subjects = (row.primary_subjects || [])
+            .slice()
+            .sort(function (a, b) {
+                return (a.sort_order || 0) - (b.sort_order || 0);
+            })
+            .map(function (subject) {
+                return {
+                    name: subject.name,
+                    price: Number(subject.price)
+                };
+            });
+
+        return {
+            standard: row.standard,
+            coreTotal: Number(row.core_total),
+            coreNote: row.core_note || "",
+            completeTotal:
+                row.complete_total !== null && row.complete_total !== undefined
+                    ? Number(row.complete_total)
+                    : null,
+            completeNote: row.complete_note || "",
+            subjects: subjects
+        };
+
+    });
+
+}
+
+/* =========================================================
+   INITIALISE PRICE LIST FROM DATABASE
+   ========================================================= */
+
+async function initializePriceList() {
+
+    if (!priceListContainer) {
+        return;
+    }
+
+    priceListContainer.innerHTML = `
+        <div class="price-list-loading" style="grid-column: 1 / -1; text-align: center; padding: 40px; color: #666;">
+            <p>Loading products...</p>
+        </div>
+    `;
+
+    if (priceResultsCount) {
+        priceResultsCount.textContent = "Loading products...";
+    }
+
+    if (noPriceResults) {
+        noPriceResults.style.display = "none";
+    }
+
+    const products = await fetchProductsFromDatabase();
+
+    if (!products || products.length === 0) {
+
+        priceListProducts = [];
+
+        priceListContainer.innerHTML = `
+            <div class="price-list-error" style="grid-column: 1 / -1; text-align: center; padding: 40px; color: #666;">
+                <p>We couldn't load products right now. Please check your internet connection.</p>
+                <button type="button" id="retryPriceListLoad" class="btn btn-secondary" style="margin-top: 12px;">
+                    Try Again
+                </button>
+            </div>
+        `;
+
+        if (priceResultsCount) {
+            priceResultsCount.textContent = "0 products found";
+        }
+
+        const retryButton = document.querySelector("#retryPriceListLoad");
+
+        if (retryButton) {
+            retryButton.addEventListener("click", initializePriceList);
+        }
+
+        return;
+    }
+
+    priceListProducts = products;
 
     displayPriceProducts();
 
 }
 
 
+if (priceListContainer) {
+
+    initializePriceList();
+
+}
+
+
 /* =========================================================
-   INITIALISE PRIMARY BOOKS
+   INITIALISE PRIMARY BOOKS FROM DATABASE
    ========================================================= */
+
+let primaryStandards = [];
+
+async function initializePrimaryBooks() {
+
+    if (!primaryBooksContainer) {
+        return;
+    }
+
+    primaryBooksContainer.innerHTML = `
+        <div class="primary-books-loading" style="grid-column: 1 / -1; text-align: center; padding: 40px; color: #666;">
+            <p>Loading primary textbook packages...</p>
+        </div>
+    `;
+
+    const rawStandards = await fetchPrimaryStandardsFromDatabase();
+
+    if (!rawStandards || rawStandards.length === 0) {
+
+        primaryStandards = [];
+
+        primaryBooksContainer.innerHTML = `
+            <div class="primary-books-error" style="grid-column: 1 / -1; text-align: center; padding: 40px; color: #666;">
+                <p>We couldn't load primary textbook packages right now. Please check your internet connection.</p>
+                <button type="button" id="retryPrimaryBooksLoad" class="btn btn-secondary" style="margin-top: 12px;">
+                    Try Again
+                </button>
+            </div>
+        `;
+
+        const retryButton = document.querySelector("#retryPrimaryBooksLoad");
+
+        if (retryButton) {
+            retryButton.addEventListener("click", initializePrimaryBooks);
+        }
+
+        return;
+    }
+
+    primaryStandards = normalizePrimaryStandards(rawStandards);
+
+    displayPrimaryBooks();
+
+}
+
 
 if (primaryBooksContainer) {
 
-    displayPrimaryBooks();
+    initializePrimaryBooks();
 
 }
 

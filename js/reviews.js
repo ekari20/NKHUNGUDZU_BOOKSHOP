@@ -231,7 +231,7 @@ async function fetchReviewsFromDatabase() {
         console.warn("Supabase REST query failed, using local cached reviews:", err);
     }
 
-    // 3. Fallback to cached/default reviews if network is unreachable
+    // 3. Fallback to cached/default reviews if the network is unreachable
     return getLocalReviews();
 }
 
@@ -379,7 +379,7 @@ if (reviewForm) {
             return;
         }
 
-        /* Show loading state on submit button */
+        /* Show loading state on Submit button */
         if (submitButton) {
             submitButton.disabled = true;
             submitButton.textContent = "Submitting Review...";
@@ -415,7 +415,7 @@ if (reviewForm) {
             }
         }
 
-        // 2. Try REST API insert if Supabase client did not succeed
+        // 2. Try REST API insert if a Supabase client did not succeed
         if (!insertSuccess) {
             try {
                 const response = await fetch(`${SUPABASE_URL}/rest/v1/reviews`, {
