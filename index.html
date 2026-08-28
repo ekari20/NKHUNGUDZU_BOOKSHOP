@@ -1,810 +1,961 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
+<head>
+    <meta charset="UTF-8"/>
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="/images/favicon/apple-touch-icon.png"
+            rel="apple-touch-icon"
+            sizes="180x180"
+            href="images/favicon/apple-touch-icon.png"
     />
     <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="/images/favicon/favicon-32x32.png"
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="images/favicon/favicon-32x32.png"
     />
     <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="/images/favicon/favicon-16x16.png"
+            rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="images/favicon/favicon-16x16.png"
     />
-    <link rel="manifest" href="/images/favicon/site.webmanifest" />
+    <link rel="manifest" href="images/favicon/site.webmanifest"/>
 
     <title>Nkhungudzu Bookshop | Education Made Simple</title>
 
-    <link rel="stylesheet" href="./css/style.css" />
-  </head>
+    <link rel="stylesheet" href="css/style.css"/>
+</head>
 
-  <body>
-    <!-- =====================================================
-         TOP INFORMATION BAR
-         ===================================================== -->
-    <div class="top-bar">
-      <div class="container">
+<body>
+<!-- =====================================================
+     TOP INFORMATION BAR
+     ===================================================== -->
+<div class="top-bar">
+    <div class="container">
         <div class="top-contact">
-          <span>📞 0998 184 070</span>
-          <span>✉️ nkhungudzubookshop@gmail.com</span>
+            <span><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor"
+                       stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path
+                    d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"/></svg> 0998 184 070</span>
+            <span><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor"
+                       stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect
+                    width="20" height="16" x="2" y="4" rx="2"/><path
+                    d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg> nkhungudzubookshop@gmail.com</span>
         </div>
 
         <div class="top-social">
-          <span>Follow us:</span>
-          <a
-            href="https://web.facebook.com/profile.php?id=61586023103284"
-            target="_blank"
-            rel="noopener"
+            <span>Follow us:</span>
+            <a
+                    href="https://web.facebook.com/profile.php?id=61586023103284"
+                    target="_blank"
+                    rel="noopener"
             >Facebook &rightarrow;</a
-          >
+            >
         </div>
-      </div>
     </div>
+</div>
 
-    <!-- =====================================================
-         HEADER
-         ===================================================== -->
-    <header class="main-header">
-      <div class="container header-content">
+<!-- =====================================================
+     HEADER
+     ===================================================== -->
+<header class="main-header">
+    <div class="container header-content">
         <!-- Logo -->
         <a href="index.html" class="logo">
-          <img src="../images/logo.jpg" alt="Nkhungudzu bookshop Logo" />
+            <img src="images/logo.jpg" alt="Nkhungudzu bookshop Logo"/>
         </a>
 
         <!-- Search -->
         <div class="header-search">
-          <input
-            type="search"
-            placeholder="Search books, Bibles, stationery..."
-            aria-label="Search products"
-          />
+            <input
+                    type="search"
+                    placeholder="Search books, Bibles, stationery..."
+                    aria-label="Search products"
+            />
 
-          <button type="button" aria-label="Search">🔍</button>
+            <button type="button" aria-label="Search">
+                <svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor"
+                     stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <circle cx="11" cy="11" r="8"/>
+                    <path d="m21 21-4.3-4.3"/>
+                </svg>
+            </button>
         </div>
-      </div>
-    </header>
+    </div>
+</header>
 
-    <!-- =====================================================
-         NAVIGATION
-         ===================================================== -->
-    <nav class="main-navigation">
-      <div class="container nav-container">
-        <button class="mobile-menu-button" type="button">☰</button>
+<!-- =====================================================
+     NAVIGATION
+     ===================================================== -->
+<nav class="main-navigation">
+    <div class="container nav-container">
+        <button class="mobile-menu-button" type="button">
+            <svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor"
+                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M4 12h16"/>
+                <path d="M4 6h16"/>
+                <path d="M4 18h16"/>
+            </svg>
+        </button>
 
         <ul class="nav-menu">
-          <li>
-            <a href="../index.html" class="active">Home</a>
-          </li>
+            <li>
+                <a href="index.html" class="active">Home</a>
+            </li>
 
-          <li>
-            <a href="pages/books.html">Books</a>
-          </li>
+            <li>
+                <a href="pages/books.html">Books</a>
+            </li>
 
-          <li>
-            <a href="pages/bibles.html">Bibles & Song Books</a>
-          </li>
+            <li>
+                <a href="pages/bibles.html">Bibles & Song Books</a>
+            </li>
 
-          <li>
-            <a href="pages/stationery.html">Stationery</a>
-          </li>
+            <li>
+                <a href="pages/stationery.html">Stationery</a>
+            </li>
 
-          <li>
-            <a href="pages/pricelist.html">Price List</a>
-          </li>
+            <li>
+                <a href="pages/pricelist.html">Price List</a>
+            </li>
 
-          <li>
-            <a href="pages/reviews.html">Reviews</a>
-          </li>
+            <li>
+                <a href="pages/reviews.html">Reviews</a>
+            </li>
 
-          <li>
-            <a href="pages/about.html">About Us</a>
-          </li>
+            <li>
+                <a href="pages/about.html">About Us</a>
+            </li>
         </ul>
-      </div>
-    </nav>
+    </div>
+</nav>
 
-    <!-- =====================================================
-         HERO SLIDESHOW
-         ===================================================== -->
-    <main>
-      <section class="hero-slideshow">
+<!-- =====================================================
+     HERO SLIDESHOW
+     ===================================================== -->
+<main>
+    <section class="hero-slideshow">
         <!-- Slide 1 -->
         <div class="hero-slide active">
-          <div class="hero-content">
-            <span class="hero-label"> Nkhungudzu Bookshop </span>
+            <div class="hero-content">
+                <span class="hero-label"> Nkhungudzu Bookshop </span>
 
-            <h1>Education Made Simple</h1>
+                <h1>Education Made Simple</h1>
 
-            <p>We've got your educational needs covered.</p>
+                <p>We've got your educational needs covered.</p>
 
-            <a href="pages/books.html" class="btn btn-primary">
-              Explore Books
-            </a>
-          </div>
+                <a href="pages/books.html" class="btn btn-primary">
+                    Explore Books
+                </a>
+            </div>
         </div>
 
         <!-- =====================================================
      SLIDE 2 - LIMBE SHOP
      ===================================================== -->
         <div
-          class="hero-slide"
-          style="
+                class="hero-slide"
+                style="
             background-image:
               linear-gradient(rgba(0, 60, 35, 0.58), rgba(0, 60, 35, 0.58)),
-              url(&quot;images/Limbe.jpeg&quot;);
+              url(images/Limbe.jpeg);
           "
         >
-          <div class="hero-content">
-            <span class="hero-label"> NKHUNGUDZU BOOKSHOP </span>
+            <div class="hero-content">
+                <span class="hero-label"> NKHUNGUDZU BOOKSHOP </span>
 
-            <h2>Limbe Shop</h2>
+                <h2>Limbe Shop</h2>
 
-            <p>Near First Capital Bank</p>w
+                <p>Near First Capital Bank</p>w
 
-            <p><strong>Phone:</strong> 0998 184 070</p>
+                <p><strong>Phone:</strong> 0998 184 070</p>
 
-            <a href="pages/about.html" class="hero-button">
-              Visit Our Branch
-            </a>
-          </div>
+                <a href="pages/about.html" class="hero-button">
+                    Visit Our Branch
+                </a>
+            </div>
         </div>
 
         <!-- =====================================================
      SLIDE 3 - BLANTYRE SHOP
      ===================================================== -->
         <div
-          class="hero-slide"
-          style="
+                class="hero-slide"
+                style="
             background-image:
               linear-gradient(rgba(0, 60, 35, 0.58), rgba(0, 60, 35, 0.58)),
-              url(&quot;images/Blantyre.jpeg&quot;);
+              url(images/Blantyre.jpeg);
           "
         >
-          <div class="hero-content">
-            <span class="hero-label"> NKHUNGUDZU BOOKSHOP </span>
+            <div class="hero-content">
+                <span class="hero-label"> NKHUNGUDZU BOOKSHOP </span>
 
-            <h2>Blantyre Shop</h2>
+                <h2>Blantyre Shop</h2>
 
-            <p>Dossan House</p>
+                <p>Dossan House</p>
 
-            <p><strong>Phone:</strong> 0998 184 071</p>
+                <p><strong>Phone:</strong> 0998 184 071</p>
 
-            <a href="pages/about.html" class="hero-button">
-              Visit Our Branch
-            </a>
-          </div>
+                <a href="pages/about.html" class="hero-button">
+                    Visit Our Branch
+                </a>
+            </div>
         </div>
 
         <!-- =====================================================
      SLIDE 4 - ZOMBA SHOP
      ===================================================== -->
         <div
-          class="hero-slide"
-          style="
+                class="hero-slide"
+                style="
             background-image:
               linear-gradient(rgba(0, 60, 35, 0.58), rgba(0, 60, 35, 0.58)),
-              url(&quot;images/Zomba.jpeg&quot;);
+              url(images/Zomba.jpeg);
           "
         >
-          <div class="hero-content">
-            <span class="hero-label"> NKHUNGUDZU BOOKSHOP </span>
+            <div class="hero-content">
+                <span class="hero-label"> NKHUNGUDZU BOOKSHOP </span>
 
-            <h2>Zomba Shop</h2>
+                <h2>Zomba Shop</h2>
 
-            <p>Opposite Zomba Private Primary School</p>
+                <p>Opposite Zomba Private Primary School</p>
 
-            <p><strong>Phone:</strong> 0998 184 072</p>
+                <p><strong>Phone:</strong> 0998 184 072</p>
 
-            <a href="pages/about.html" class="hero-button">
-              Visit Our Branch
-            </a>
-          </div>
+                <a href="pages/about.html" class="hero-button">
+                    Visit Our Branch
+                </a>
+            </div>
         </div>
 
         <!-- =====================================================
      SLIDE 5 - LILONGWE SHOP
      ===================================================== -->
         <div
-          class="hero-slide"
-          style="
+                class="hero-slide"
+                style="
             background-image:
               linear-gradient(rgba(0, 60, 35, 0.58), rgba(0, 60, 35, 0.58)),
-              url(&quot;images/Lilongwe.jpeg&quot;);
+              url(images/Lilongwe.jpeg);
           "
         >
-          <div class="hero-content">
-            <span class="hero-label"> NKHUNGUDZU BOOKSHOP </span>
+            <div class="hero-content">
+                <span class="hero-label"> NKHUNGUDZU BOOKSHOP </span>
 
-            <h2>Lilongwe Shop</h2>
+                <h2>Lilongwe Shop</h2>
 
-            <p>Area 3, opposite Game Complex</p>
+                <p>Area 3, opposite Game Complex</p>
 
-            <p><strong>Phone:</strong> 0998 666 873</p>
+                <p><strong>Phone:</strong> 0998 666 873</p>
 
-            <a href="pages/about.html" class="hero-button">
-              Visit Our Branch
-            </a>
-          </div>
+                <a href="pages/about.html" class="hero-button">
+                    Visit Our Branch
+                </a>
+            </div>
         </div>
 
         <!-- =====================================================
      SLIDE 6 - EDUCATIONAL BOOKS
      ===================================================== -->
         <div
-          class="hero-slide"
-          style="
+                class="hero-slide"
+                style="
             background-image:
               linear-gradient(rgba(0, 60, 35, 0.6), rgba(0, 60, 35, 0.6)),
-              url(&quot;images/books.jpeg&quot;);
+              url(images/books.jpeg);
           "
         >
-          <div class="hero-content">
-            <span class="hero-label"> EDUCATIONAL BOOKS </span>
+            <div class="hero-content">
+                <span class="hero-label"> EDUCATIONAL BOOKS </span>
 
-            <h2>Books For Every Learner</h2>
+                <h2>Books For Every Learner</h2>
 
-            <p>
-              Primary and secondary textbooks from different trusted publishers.
-            </p>
+                <p>
+                    Primary and secondary textbooks from different trusted publishers.
+                </p>
 
-            <a href="pages/books.html" class="hero-button"> Explore Books </a>
-          </div>
+                <a href="pages/books.html" class="hero-button"> Explore Books </a>
+            </div>
         </div>
 
         <!-- =====================================================
      SLIDE 7 - EXCEL & SUCCEED
      ===================================================== -->
         <div
-          class="hero-slide"
-          style="
+                class="hero-slide"
+                style="
             background-image:
               linear-gradient(rgba(0, 60, 35, 0.6), rgba(0, 60, 35, 0.6)),
-              url(&quot;images/books.jpeg&quot;);
+              url(images/books.jpeg);
           "
         >
-          <div class="hero-content">
-            <span class="hero-label"> EDUCATIONAL PUBLISHERS </span>
+            <div class="hero-content">
+                <span class="hero-label"> EDUCATIONAL PUBLISHERS </span>
 
-            <h2>Excel &amp; Succeed</h2>
+                <h2>Excel &amp; Succeed</h2>
 
-            <p>Find educational books for different subjects and levels.</p>
+                <p>Find educational books for different subjects and levels.</p>
 
-            <a href="pages/books.html" class="hero-button"> View Our Books </a>
-          </div>
+                <a href="pages/books.html" class="hero-button"> View Our Books </a>
+            </div>
         </div>
 
         <!-- =====================================================
      SLIDE 8 - BIBLES
      ===================================================== -->
         <div
-          class="hero-slide"
-          style="
+                class="hero-slide"
+                style="
             background-image:
               linear-gradient(rgba(0, 60, 35, 0.58), rgba(0, 60, 35, 0.58)),
-              url(&quot;images/bibles.jpeg&quot;);
+              url(images/bibles.jpeg);
           "
         >
-          <div class="hero-content">
-            <span class="hero-label"> SPIRITUAL LITERATURE </span>
+            <div class="hero-content">
+                <span class="hero-label"> SPIRITUAL LITERATURE </span>
 
-            <h2>Bibles &amp; Song Books</h2>
+                <h2>Bibles &amp; Song Books</h2>
 
-            <p>NIV, KJV, NKJV, Chichewa Bibles and more.</p>
+                <p>NIV, KJV, NKJV, Chichewa Bibles and more.</p>
 
-            <a href="pages/bibles.html" class="hero-button"> Explore Bibles </a>
-          </div>
+                <a href="pages/bibles.html" class="hero-button"> Explore Bibles </a>
+            </div>
         </div>
 
         <!-- =====================================================
      SLIDE 9 - STATIONERY
      ===================================================== -->
         <div
-          class="hero-slide"
-          style="
+                class="hero-slide"
+                style="
             background-image:
               linear-gradient(rgba(0, 60, 35, 0.6), rgba(0, 60, 35, 0.6)),
-              url(&quot;images/stationary.jpeg&quot;);
+              url(images/stationary.jpeg);
           "
         >
-          <div class="hero-content">
-            <span class="hero-label"> SCHOOL &amp; OFFICE SUPPLIES </span>
+            <div class="hero-content">
+                <span class="hero-label"> SCHOOL &amp; OFFICE SUPPLIES </span>
 
-            <h2>Quality Stationery</h2>
+                <h2>Quality Stationery</h2>
 
-            <p>
-              Pens, coloured paper, crayons, tape, markers, highlighters and
-              more.
-            </p>
+                <p>
+                    Pens, colored paper, crayons, tape, markers, highlighters and
+                    more.
+                </p>
 
-            <a href="pages/stationery.html" class="hero-button">
-              Explore Stationery
-            </a>
-          </div>
+                <a href="pages/stationery.html" class="hero-button">
+                    Explore Stationery
+                </a>
+            </div>
         </div>
 
         <!-- =====================================================
      SLIDE 10 - FINAL PROMOTIONAL SLIDE
      ===================================================== -->
         <div
-          class="hero-slide"
-          style="
+                class="hero-slide"
+                style="
             background-image:
               linear-gradient(rgba(0, 60, 35, 0.6), rgba(0, 60, 35, 0.6)),
-              url(&quot;images/Limbe.jpeg&quot;);
+              url(images/Limbe.jpeg);
           "
         >
-          <div class="hero-content">
-            <span class="hero-label"> NKHUNGUDZU BOOKSHOP </span>
+            <div class="hero-content">
+                <span class="hero-label"> NKHUNGUDZU BOOKSHOP </span>
 
-            <h2>Visit Us Today</h2>
+                <h2>Visit Us Today</h2>
 
-            <p>
-              Four branches across Malawi offering educational books, spiritual
-              literature and stationery.
-            </p>
+                <p>
+                    Four branches across Malawi offer educational books, spiritual
+                    literature and stationery.
+                </p>
 
-            <a href="about.html" class="hero-button"> Find A Branch </a>
-          </div>
+                <a href="pages/about.html" class="hero-button"> Find A Branch </a>
+            </div>
         </div>
 
         <!-- Slideshow controls -->
         <button
-          class="slide-control previous-slide"
-          type="button"
-          aria-label="Previous slide"
+                class="slide-control previous-slide"
+                type="button"
+                aria-label="Previous slide"
         >
-          ❮
+            ❮
         </button>
 
         <button
-          class="slide-control next-slide"
-          type="button"
-          aria-label="Next slide"
+                class="slide-control next-slide"
+                type="button"
+                aria-label="Next slide"
         >
-          ❯
+            ❯
         </button>
 
         <!-- Slideshow indicators -->
         <div class="slide-indicators">
-          <button
-            class="slide-dot active"
-            type="button"
-            aria-label="Slide 1"
-          ></button>
+            <button
+                    class="slide-dot active"
+                    type="button"
+                    aria-label="Slide 1"
+            ></button>
 
-          <button class="slide-dot" type="button" aria-label="Slide 2"></button>
+            <button class="slide-dot" type="button" aria-label="Slide 2"></button>
 
-          <button class="slide-dot" type="button" aria-label="Slide 3"></button>
+            <button class="slide-dot" type="button" aria-label="Slide 3"></button>
 
-          <button class="slide-dot" type="button" aria-label="Slide 4"></button>
+            <button class="slide-dot" type="button" aria-label="Slide 4"></button>
 
-          <button class="slide-dot" type="button" aria-label="Slide 5"></button>
+            <button class="slide-dot" type="button" aria-label="Slide 5"></button>
 
-          <button class="slide-dot" type="button" aria-label="Slide 6"></button>
+            <button class="slide-dot" type="button" aria-label="Slide 6"></button>
 
-          <button class="slide-dot" type="button" aria-label="Slide 7"></button>
+            <button class="slide-dot" type="button" aria-label="Slide 7"></button>
 
-          <button class="slide-dot" type="button" aria-label="Slide 8"></button>
+            <button class="slide-dot" type="button" aria-label="Slide 8"></button>
 
-          <button class="slide-dot" type="button" aria-label="Slide 9"></button>
+            <button class="slide-dot" type="button" aria-label="Slide 9"></button>
 
-          <button
-            class="slide-dot"
-            type="button"
-            aria-label="Slide 10"
-          ></button>
+            <button
+                    class="slide-dot"
+                    type="button"
+                    aria-label="Slide 10"
+            ></button>
         </div>
-      </section>
-
-      <!-- =====================================================
-             PUBLISHING SERVICES POPUP
-             ===================================================== -->
-      <div id="publishingPopup" class="publishing-popup">
-        <div class="popup-content">
-          <button class="popup-close" type="button">&times;</button>
-
-          <h2>We Also Provide Book Publishing Services</h2>
-
-          <p>For more information, please call:</p>
-
-          <strong> +265 999 036 082 </strong>
-        </div>
-      </div>
-
-      <!-- =====================================================
-             CATEGORY SECTION
-             ===================================================== -->
-      <section class="categories section">
-        <div class="container">
-          <div class="section-heading">
-            <span>Explore Our Products</span>
-
-            <h2>Everything You Need in One Place</h2>
-
-            <p>
-              From educational books to spiritual literature and stationery,
-              we've got your needs covered.
-            </p>
-          </div>
-
-          <div class="category-grid">
-            <!-- School Books -->
-            <article class="category-card">
-              <div class="category-icon">📚</div>
-
-              <h3>School Books</h3>
-
-              <p>
-                Primary and secondary textbooks for different subjects and
-                standards.
-              </p>
-
-              <a href="pages/books.html"> Explore Books → </a>
-            </article>
-
-            <!-- Bibles -->
-            <article class="category-card">
-              <div class="category-icon">📖</div>
-
-              <h3>Bibles & Song Books</h3>
-
-              <p>NIV, KJV, NKJV, Chichewa Bibles and spiritual literature.</p>
-
-              <a href="pages/bibles.html"> Explore Bibles → </a>
-            </article>
-
-            <!-- Stationery -->
-            <article class="category-card">
-              <div class="category-icon">✏️</div>
-
-              <h3>Stationery</h3>
-
-              <p>Pens, crayons, markers, paper, tape and much more.</p>
-
-              <a href="pages/stationery.html"> Explore Stationery → </a>
-            </article>
-
-            <!-- Price List -->
-            <article class="category-card">
-              <div class="category-icon">💰</div>
-
-              <h3>Price List</h3>
-
-              <p>Search and explore our latest product prices.</p>
-
-              <a href="pages/pricelist.html"> View Prices → </a>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <!-- =====================================================
-             WHY CHOOSE US
-             ===================================================== -->
-      <section class="why-us section">
-        <div class="container">
-          <div class="section-heading">
-            <span>Why Nkhungudzu?</span>
-
-            <h2>Education Made Simple</h2>
-          </div>
-
-          <div class="features-grid">
-            <div class="feature">
-              <div class="feature-icon">✓</div>
-
-              <h3>Quality Products</h3>
-
-              <p>Quality educational, spiritual and stationery products.</p>
-            </div>
-
-            <div class="feature">
-              <div class="feature-icon">🏪</div>
-
-              <h3>Four Convenient Shops</h3>
-
-              <p>Visit us in Limbe, Blantyre, Zomba or Lilongwe.</p>
-            </div>
-
-            <div class="feature">
-              <div class="feature-icon">🤝</div>
-
-              <h3>Reliable Service</h3>
-
-              <p>
-                We strive to serve our customers with reliability and integrity.
-              </p>
-            </div>
-
-            <div class="feature">
-              <div class="feature-icon">🎓</div>
-
-              <h3>Supporting Education</h3>
-
-              <p>Serving learners, schools, institutions and communities.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- =====================================================
-             FEATURED PRODUCTS
-             ===================================================== -->
-      <section class="featured-products section">
-        <div class="container">
-          <div class="section-heading">
-            <span>Our Products</span>
-
-            <h2>Featured Products</h2>
-
-            <p>
-              Discover some of the products available at Nkhungudzu Bookshop.
-            </p>
-          </div>
-
-          <!-- JavaScript will generate products here -->
-          <div class="product-grid" id="featuredProducts">
-            <!-- Products will be added using JavaScript -->
-          </div>
-
-          <div class="section-button">
-            <a href="pages/books.html" class="btn btn-secondary">
-              View All Products
-            </a>
-          </div>
-        </div>
-      </section>
-
-      <!-- =====================================================
-             OUR BRANCHES
-             ===================================================== -->
-      <section class="branches section">
-        <div class="container">
-          <div class="section-heading">
-            <span>Find Us</span>
-
-            <h2>Visit Our Branches</h2>
-
-            <p>We have four convenient locations across Malawi.</p>
-          </div>
-
-          <div class="branch-grid">
-            <!-- Limbe -->
-            <article class="branch-card">
-              <div class="branch-image">
-                <img
-                  src="./images/Limbe.jpeg"
-                  alt="Nkhungudzu Bookshop Limbe Shop"
-                />
-              </div>
-
-              <div class="branch-content">
-                <span class="branch-number"> Branch 01 </span>
-
-                <h3>Limbe Shop</h3>
-
-                <p>📍 Near First Capital Bank</p>
-
-                <p>📞 0998 184 070</p>
-
-                <p class="opening-hours">
-                  Mon–Fri: 8:00 AM – 4:30 PM<br />
-                  Saturday: 8:30 AM – 2:00 PM
-                </p>
-              </div>
-            </article>
-
-            <!-- Blantyre -->
-            <article class="branch-card">
-              <div class="branch-image">
-                <img
-                  src="/images/Blantyre.jpeg"
-                  alt="Nkhungudzu Bookshop Blantyre Shop"
-                />
-              </div>
-
-              <div class="branch-content">
-                <span class="branch-number"> Branch 02 </span>
-
-                <h3>Blantyre Shop</h3>
-
-                <p>📍 Dossan House</p>
-
-                <p>📞 0998 184 071</p>
-
-                <p class="opening-hours">
-                  Mon–Fri: 8:00 AM – 4:30 PM<br />
-                  Saturday: 8:30 AM – 2:00 PM
-                </p>
-              </div>
-            </article>
-
-            <!-- Zomba -->
-            <article class="branch-card">
-              <div class="branch-image">
-                <img
-                  src="/images/Zomba.jpeg"
-                  alt="Nkhungudzu Bookshop Zomba Shop"
-                />
-              </div>
-
-              <div class="branch-content">
-                <span class="branch-number"> Branch 03 </span>
-
-                <h3>Zomba Shop</h3>
-
-                <p>📍 Opposite Zomba Private Primary School</p>
-
-                <p>📞 0998 184 072</p>
-
-                <p class="opening-hours">
-                  Mon–Fri: 8:00 AM – 4:30 PM<br />
-                  Saturday: 8:30 AM – 2:00 PM
-                </p>
-              </div>
-            </article>
-
-            <!-- Lilongwe -->
-            <article class="branch-card">
-              <div class="branch-image">
-                <img
-                  src="/images/Lilongwe.jpeg"
-                  alt="Nkhungudzu Bookshop Lilongwe Shop"
-                />
-              </div>
-
-              <div class="branch-content">
-                <span class="branch-number"> Branch 04 </span>
-
-                <h3>Lilongwe Shop</h3>
-
-                <p>📍 Area 3, opposite Game Complex</p>
-
-                <p>📞 0998 666 873</p>
-
-                <p class="opening-hours">
-                  Mon–Fri: 8:00 AM – 4:30 PM<br />
-                  Saturday: 8:30 AM – 2:00 PM
-                </p>
-              </div>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <!-- =====================================================
-             ABOUT PREVIEW
-             ===================================================== -->
-      <section class="about-preview section">
-        <div class="container about-preview-content">
-          <div class="about-text">
-            <span class="section-label"> About Nkhungudzu </span>
-
-            <h2>Serving Education & Spiritual Literature Since 2012</h2>
-
-            <p>
-              Nkhungudzu Bookshop was established on Thursday, 4 October 2012,
-              to serve people in education and spiritual literature.
-            </p>
-
-            <p>
-              We provide books, office stationery and spiritual literature to
-              schools, institutions and communities.
-            </p>
-
-            <a href="pages/about.html" class="btn btn-primary">
-              Learn More About Us
-            </a>
-          </div>
-
-          <div class="about-highlight">
-            <span> ESTABLISHED </span>
-
-            <strong> 2012 </strong>
-
-            <p>Education Made Simple</p>
-          </div>
-        </div>
-      </section>
-    </main>
+    </section>
 
     <!-- =====================================================
-         FOOTER
-         ===================================================== -->
-    <footer class="main-footer">
-      <div class="container footer-grid">
+           PUBLISHING SERVICES POPUP
+           ===================================================== -->
+    <div id="publishingPopup" class="publishing-popup">
+        <div class="popup-content">
+            <button class="popup-close" type="button">&times;</button>
+
+            <h2>We Also Provide Book Publishing Services</h2>
+
+            <p>For more information, please call:</p>
+
+            <strong> +265 999 036 082 </strong>
+        </div>
+    </div>
+
+    <!-- =====================================================
+           CATEGORY SECTION
+           ===================================================== -->
+    <section class="categories section">
+        <div class="container">
+            <div class="section-heading">
+                <span>Explore Our Products</span>
+
+                <h2>Everything You Need in One Place</h2>
+
+                <p>
+                    From educational books to spiritual literature and stationery,
+                    we've got your needs covered.
+                </p>
+            </div>
+
+            <div class="category-grid">
+                <!-- School Books -->
+                <article class="category-card">
+                    <div class="category-icon">
+                        <svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor"
+                             stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+                            <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+                        </svg>
+                    </div>
+
+                    <h3>School Books</h3>
+
+                    <p>
+                        Primary and secondary textbooks for different subjects and
+                        standards.
+                    </p>
+
+                    <a href="pages/books.html"> Explore Books → </a>
+                </article>
+
+                <!-- Bibles -->
+                <article class="category-card">
+                    <div class="category-icon">
+                        <svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor"
+                             stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M12 7v14"/>
+                            <path d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"/>
+                        </svg>
+                    </div>
+
+                    <h3>Bibles & Song Books</h3>
+
+                    <p>NIV, KJV, NKJV, Chichewa Bibles and spiritual literature.</p>
+
+                    <a href="pages/bibles.html"> Explore Bibles → </a>
+                </article>
+
+                <!-- Stationery -->
+                <article class="category-card">
+                    <div class="category-icon">
+                        <svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor"
+                             stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z"/>
+                            <path d="m15 5 4 4"/>
+                        </svg>
+                    </div>
+
+                    <h3>Stationery</h3>
+
+                    <p>Pens, crayons, markers, paper, tape and much more.</p>
+
+                    <a href="pages/stationery.html"> Explore Stationery → </a>
+                </article>
+
+                <!-- Price List -->
+                <article class="category-card">
+                    <div class="category-icon">
+                        <svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor"
+                             stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M19 7V4a1 1 0 0 0-1-1H5a2 2 0 0 0 0 4h15a1 1 0 0 1 1 1v4"/>
+                            <path d="M3 5v14a2 2 0 0 0 2 2h15a1 1 0 0 0 1-1v-4"/>
+                            <path d="M18 12a2 2 0 0 0 0 4h4v-4Z"/>
+                        </svg>
+                    </div>
+
+                    <h3>Price List</h3>
+
+                    <p>Search and explore our latest product prices.</p>
+
+                    <a href="pages/pricelist.html"> View Prices → </a>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- =====================================================
+           WHY CHOOSE US
+           ===================================================== -->
+    <section class="why-us section">
+        <div class="container">
+            <div class="section-heading">
+                <span>Why Nkhungudzu?</span>
+
+                <h2>Education Made Simple</h2>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature">
+                    <div class="feature-icon">
+                        <svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor"
+                             stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M20 6 9 17l-5-5"/>
+                        </svg>
+                    </div>
+
+                    <h3>Quality Products</h3>
+
+                    <p>Quality educational, spiritual and stationery products.</p>
+                </div>
+
+                <div class="feature">
+                    <div class="feature-icon">
+                        <svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor"
+                             stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M2 7h20l-1.6 8.1a2 2 0 0 1-2 1.9H5.6a2 2 0 0 1-2-1.9z"/>
+                            <path d="M6 7V5a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v2"/>
+                            <path d="M12 12v3"/>
+                        </svg>
+                    </div>
+
+                    <h3>Four Convenient Shops</h3>
+
+                    <p>Visit us in Limbe, Blantyre, Zomba or Lilongwe.</p>
+                </div>
+
+                <div class="feature">
+                    <div class="feature-icon">
+                        <svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor"
+                             stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="m11 17 2 2a1 1 0 1 0 3-3"/>
+                            <path d="m14 14 2.5 2.5a1 1 0 1 0 3-3l-3.88-3.88a3 3 0 0 0-4.24 0l-.88.88a1 1 0 1 1-3-3l2.81-2.81a5.79 5.79 0 0 1 7.06-.87l.47.28a2 2 0 0 0 1.42.25L21 4"/>
+                            <path d="m21 3 1 11h-2"/>
+                            <path d="M3 3 2 14l6.5 6.5a1 1 0 1 0 3-3"/>
+                            <path d="M3 4h8"/>
+                        </svg>
+                    </div>
+
+                    <h3>Reliable Service</h3>
+
+                    <p>
+                        We strive to serve our customers with reliability and integrity.
+                    </p>
+                </div>
+
+                <div class="feature">
+                    <div class="feature-icon">
+                        <svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor"
+                             stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"/>
+                            <path d="M22 10v6"/>
+                            <path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"/>
+                        </svg>
+                    </div>
+
+                    <h3>Supporting Education</h3>
+
+                    <p>Serving learners, schools, institutions and communities.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =====================================================
+           FEATURED PRODUCTS
+           ===================================================== -->
+    <section class="featured-products section">
+        <div class="container">
+            <div class="section-heading">
+                <span>Our Products</span>
+
+                <h2>Featured Products</h2>
+
+                <p>
+                    Discover some products available at Nkhungudzu Bookshop.
+                </p>
+            </div>
+
+            <!-- JavaScript will generate products here -->
+            <div class="product-grid" id="featuredProducts">
+                <!-- Products will be added using JavaScript -->
+            </div>
+
+            <div class="section-button">
+                <a href="pages/books.html" class="btn btn-secondary">
+                    View All Products
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- =====================================================
+           OUR BRANCHES
+           ===================================================== -->
+    <section class="branches section">
+        <div class="container">
+            <div class="section-heading">
+                <span>Find Us</span>
+
+                <h2>Visit Our Branches</h2>
+
+                <p>We have four convenient locations across Malawi.</p>
+            </div>
+
+            <div class="branch-grid">
+                <!-- Limbe -->
+                <article class="branch-card">
+                    <div class="branch-image">
+                        <img
+                                src="images/Limbe.jpeg"
+                                alt="Nkhungudzu Bookshop Limbe Shop"
+                        />
+                    </div>
+
+                    <div class="branch-content">
+                        <span class="branch-number"> Branch 01 </span>
+
+                        <h3>Limbe Shop</h3>
+
+                        <p>
+                            <svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="none"
+                                 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                 aria-hidden="true">
+                                <path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/>
+                                <circle cx="12" cy="10" r="3"/>
+                            </svg>
+                            Near First Capital Bank
+                        </p>
+
+                        <p>
+                            <svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="none"
+                                 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                 aria-hidden="true">
+                                <path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"/>
+                            </svg>
+                            0998 184 070
+                        </p>
+
+                        <p class="opening-hours">
+                            Mon–Fri: 8:00 AM – 4:30 PM<br/>
+                            Saturday: 8:30 AM – 2:00 PM
+                        </p>
+                    </div>
+                </article>
+
+                <!-- Blantyre -->
+                <article class="branch-card">
+                    <div class="branch-image">
+                        <img
+                                src="images/Blantyre.jpeg"
+                                alt="Nkhungudzu Bookshop Blantyre Shop"
+                        />
+                    </div>
+
+                    <div class="branch-content">
+                        <span class="branch-number"> Branch 02 </span>
+
+                        <h3>Blantyre Shop</h3>
+
+                        <p>
+                            <svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="none"
+                                 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                 aria-hidden="true">
+                                <path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/>
+                                <circle cx="12" cy="10" r="3"/>
+                            </svg>
+                            Dossan House
+                        </p>
+
+                        <p>
+                            <svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="none"
+                                 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                 aria-hidden="true">
+                                <path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"/>
+                            </svg>
+                            0998 184 071
+                        </p>
+
+                        <p class="opening-hours">
+                            Mon–Fri: 8:00 AM – 4:30 PM<br/>
+                            Saturday: 8:30 AM – 2:00 PM
+                        </p>
+                    </div>
+                </article>
+
+                <!-- Zomba -->
+                <article class="branch-card">
+                    <div class="branch-image">
+                        <img
+                                src="images/Zomba.jpeg"
+                                alt="Nkhungudzu Bookshop Zomba Shop"
+                        />
+                    </div>
+
+                    <div class="branch-content">
+                        <span class="branch-number"> Branch 03 </span>
+
+                        <h3>Zomba Shop</h3>
+
+                        <p>
+                            <svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="none"
+                                 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                 aria-hidden="true">
+                                <path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/>
+                                <circle cx="12" cy="10" r="3"/>
+                            </svg>
+                            Opposite Zomba Private Primary School
+                        </p>
+
+                        <p>
+                            <svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="none"
+                                 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                 aria-hidden="true">
+                                <path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"/>
+                            </svg>
+                            0998 184 072
+                        </p>
+
+                        <p class="opening-hours">
+                            Mon–Fri: 8:00 AM – 4:30 PM<br/>
+                            Saturday: 8:30 AM – 2:00 PM
+                        </p>
+                    </div>
+                </article>
+
+                <!-- Lilongwe -->
+                <article class="branch-card">
+                    <div class="branch-image">
+                        <img
+                                src="images/Lilongwe.jpeg"
+                                alt="Nkhungudzu Bookshop Lilongwe Shop"
+                        />
+                    </div>
+
+                    <div class="branch-content">
+                        <span class="branch-number"> Branch 04 </span>
+
+                        <h3>Lilongwe Shop</h3>
+
+                        <p>
+                            <svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="none"
+                                 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                 aria-hidden="true">
+                                <path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/>
+                                <circle cx="12" cy="10" r="3"/>
+                            </svg>
+                            Area 3, opposite Game Complex
+                        </p>
+
+                        <p>
+                            <svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="none"
+                                 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                 aria-hidden="true">
+                                <path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"/>
+                            </svg>
+                            0998 666 873
+                        </p>
+
+                        <p class="opening-hours">
+                            Mon–Fri: 8:00 AM – 4:30 PM<br/>
+                            Saturday: 8:30 AM – 2:00 PM
+                        </p>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- =====================================================
+           ABOUT PREVIEW
+           ===================================================== -->
+    <section class="about-preview section">
+        <div class="container about-preview-content">
+            <div class="about-text">
+                <span class="section-label"> About Nkhungudzu </span>
+
+                <h2>Serving Education & Spiritual Literature Since 2012</h2>
+
+                <p>
+                    Nkhungudzu Bookshop was established on Thursday, 4 October 2012,
+                    to serve people in education and spiritual literature.
+                </p>
+
+                <p>
+                    We provide books, office stationery and spiritual literature to
+                    schools, institutions and communities.
+                </p>
+
+                <a href="pages/about.html" class="btn btn-primary">
+                    Learn More About Us
+                </a>
+            </div>
+
+            <div class="about-highlight">
+                <span> ESTABLISHED </span>
+
+                <strong> 2012 </strong>
+
+                <p>Education Made Simple</p>
+            </div>
+        </div>
+    </section>
+</main>
+
+<!-- =====================================================
+     FOOTER
+     ===================================================== -->
+<footer class="main-footer">
+    <div class="container footer-grid">
         <!-- Company -->
         <div class="footer-column">
-          <img
-            src="../images/logo.jpg"
-            alt="Nkhungudzu bookshop logo"
-            class="footer-logo"
-          />
+            <img
+                    src="images/logo.jpg"
+                    alt="Nkhungudzu bookshop logo"
+                    class="footer-logo"
+            />
 
-          <p>
-            <strong>Education Made Simple.</strong>
-          </p>
+            <p>
+                <strong>Education Made Simple.</strong>
+            </p>
 
-          <p>We've got your educational needs covered.</p>
+            <p>We've got your educational needs covered.</p>
         </div>
 
         <!-- Quick Links -->
         <div class="footer-column">
-          <h3>Quick Links</h3>
+            <h3>Quick Links</h3>
 
-          <ul>
-            <li>
-              <a href="index.html">Home</a>
-            </li>
+            <ul>
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
 
-            <li>
-              <a href="pages/about.html">About Us</a>
-            </li>
+                <li>
+                    <a href="pages/about.html">About Us</a>
+                </li>
 
-            <li>
-              <a href="pages/books.html">Books</a>
-            </li>
+                <li>
+                    <a href="pages/books.html">Books</a>
+                </li>
 
-            <li>
-              <a href="pages/bibles.html"> Bibles & Song Books </a>
-            </li>
+                <li>
+                    <a href="pages/bibles.html"> Bibles & Song Books </a>
+                </li>
 
-            <li>
-              <a href="pages/stationery.html"> Stationery </a>
-            </li>
+                <li>
+                    <a href="pages/stationery.html"> Stationery </a>
+                </li>
 
-            <li>
-              <a href="pages/pricelist.html"> Price List </a>
-            </li>
-          </ul>
+                <li>
+                    <a href="pages/pricelist.html"> Price List </a>
+                </li>
+            </ul>
         </div>
 
         <!-- Contact -->
         <div class="footer-column">
-          <h3>Contact Us</h3>
+            <h3>Contact Us</h3>
 
-          <p>📞 0998 184 070</p>
+            <p>
+                <svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor"
+                     stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"/>
+                </svg>
+                0998 184 070
+            </p>
 
-          <p>✉️ nkhungudzubookshop@gmail.com</p>
+            <p>
+                <svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor"
+                     stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <rect width="20" height="16" x="2" y="4" rx="2"/>
+                    <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+                </svg>
+                nkhungudzubookshop@gmail.com
+            </p>
 
-          <p>📍 Malawi</p>
+            <p>
+                <svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor"
+                     stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/>
+                    <circle cx="12" cy="10" r="3"/>
+                </svg>
+                Malawi
+            </p>
         </div>
 
         <!-- Social -->
         <div class="footer-column">
-          <h3>Follow Us</h3>
+            <h3>Follow Us</h3>
 
-          <p>Follow Nkhungudzu Bookshop on Facebook.</p>
+            <p>Follow Nkhungudzu Bookshop on Facebook.</p>
 
-          <a
-            href="https://web.facebook.com/profile.php?id=61586023103284"
-            target="_blank"
-          >
-            Facebook →
-          </a>
+            <a
+                    href="https://web.facebook.com/profile.php?id=61586023103284"
+                    target="_blank"
+            >
+                Facebook →
+            </a>
         </div>
-      </div>
+    </div>
 
-      <div class="footer-bottom">
+    <div class="footer-bottom">
         <div class="container">
-          <p>© 2026 Nkhungudzu Bookshop. All Rights Reserved.</p>
+            <p>&copy; 2026 Nkhungudzu Bookshop. All Rights Reserved.</p>
 
-          <p>Education Made Simple</p>
+            <p>Education Made Simple</p>
         </div>
-      </div>
-    </footer>
+    </div>
+</footer>
 
-    <!-- JavaScript -->
-    <script src="./js/script.js"></script>
-  </body>
+<!-- JavaScript -->
+<script src="js/script.js"></script>
+</body>
 </html>
