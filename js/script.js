@@ -8,40 +8,33 @@
    ========================================================= */
 
 document.addEventListener("DOMContentLoaded", function () {
-    const mobileMenuButton = document.querySelector(".mobile-menu-button");
+  const mobileMenuButton = document.querySelector(".mobile-menu-button");
 
-    const navMenu = document.querySelector(".nav-menu");
+  const navMenu = document.querySelector(".nav-menu");
 
-    /* Inline SVG icons (Lucide) so the menu toggle works fully offline */
-    const menuIconSVG =
-        '<svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16"/><path d="M4 6h16"/><path d="M4 18h16"/></svg>';
+  console.log("Mobile button:", mobileMenuButton);
 
-    const closeIconSVG =
-        '<svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>';
+  console.log("Navigation menu:", navMenu);
 
-    console.log("Mobile button:", mobileMenuButton);
+  if (!mobileMenuButton || !navMenu) {
+    console.log("Mobile navigation elements were not found.");
 
-    console.log("Navigation menu:", navMenu);
+    return;
+  }
 
-    if (!mobileMenuButton || !navMenu) {
-        console.log("Mobile navigation elements were not found.");
+  mobileMenuButton.addEventListener("click", function () {
+    navMenu.classList.toggle("show");
 
-        return;
+    if (navMenu.classList.contains("show")) {
+      mobileMenuButton.textContent = "✕";
+
+      mobileMenuButton.setAttribute("aria-expanded", "true");
+    } else {
+      mobileMenuButton.textContent = "☰";
+
+      mobileMenuButton.setAttribute("aria-expanded", "false");
     }
-
-    mobileMenuButton.addEventListener("click", function () {
-        navMenu.classList.toggle("show");
-
-        if (navMenu.classList.contains("show")) {
-            mobileMenuButton.innerHTML = closeIconSVG;
-
-            mobileMenuButton.setAttribute("aria-expanded", "true");
-        } else {
-            mobileMenuButton.innerHTML = menuIconSVG;
-
-            mobileMenuButton.setAttribute("aria-expanded", "false");
-        }
-    });
+  });
 });
 
 /* =========================================================
@@ -49,149 +42,149 @@ document.addEventListener("DOMContentLoaded", function () {
    ========================================================= */
 
 document.addEventListener("DOMContentLoaded", function () {
-    const slides = document.querySelectorAll(".hero-slide");
+  const slides = document.querySelectorAll(".hero-slide");
 
-    const nextButton = document.querySelector(".next-slide");
+  const nextButton = document.querySelector(".next-slide");
 
-    const previousButton = document.querySelector(".previous-slide");
+  const previousButton = document.querySelector(".previous-slide");
 
-    const dots = document.querySelectorAll(".slide-dot");
+  const dots = document.querySelectorAll(".slide-dot");
 
-    const slideshow = document.querySelector(".hero-slideshow");
+  const slideshow = document.querySelector(".hero-slideshow");
 
-    let currentSlide = 0;
+  let currentSlide = 0;
 
-    let slideshowTimer;
+  let slideshowTimer;
 
-    let slideshowPaused = false;
+  let slideshowPaused = false;
 
-    console.log("Number of slides found:", slides.length);
+  console.log("Number of slides found:", slides.length);
 
-    console.log("Number of dots found:", dots.length);
+  console.log("Number of dots found:", dots.length);
 
-    /* ---------------------------------------------------------
-         SHOW SELECTED SLIDE
-         --------------------------------------------------------- */
+  /* ---------------------------------------------------------
+       SHOW SELECTED SLIDE
+       --------------------------------------------------------- */
 
-    function showSlide(index) {
-        if (slides.length === 0) {
-            console.log("No slideshow slides were found.");
+  function showSlide(index) {
+    if (slides.length === 0) {
+      console.log("No slideshow slides were found.");
 
-            return;
-        }
-
-        /* Keep slide number within range */
-
-        if (index >= slides.length) {
-            currentSlide = 0;
-        } else if (index < 0) {
-            currentSlide = slides.length - 1;
-        } else {
-            currentSlide = index;
-        }
-
-        /* Hide all slides */
-
-        slides.forEach(function (slide) {
-            slide.classList.remove("active");
-        });
-
-        /* Reset all dots */
-
-        dots.forEach(function (dot) {
-            dot.classList.remove("active");
-        });
-
-        /* Show current slide */
-
-        slides[currentSlide].classList.add("active");
-
-        /* Activate matching dot */
-
-        if (dots[currentSlide]) {
-            dots[currentSlide].classList.add("active");
-        }
-
-        console.log("Showing slide:", currentSlide + 1);
+      return;
     }
 
-    /* ---------------------------------------------------------
-         NEXT SLIDE
-         --------------------------------------------------------- */
+    /* Keep slide number within range */
 
-    function nextSlide() {
-        showSlide(currentSlide + 1);
+    if (index >= slides.length) {
+      currentSlide = 0;
+    } else if (index < 0) {
+      currentSlide = slides.length - 1;
+    } else {
+      currentSlide = index;
     }
 
-    /* ---------------------------------------------------------
-         PREVIOUS SLIDE
-         --------------------------------------------------------- */
+    /* Hide all slides */
 
-    function previousSlide() {
-        showSlide(currentSlide - 1);
-    }
-
-    /* ---------------------------------------------------------
-         NEXT BUTTON
-         --------------------------------------------------------- */
-
-    if (nextButton) {
-        nextButton.addEventListener("click", nextSlide);
-    }
-
-    /* ---------------------------------------------------------
-         PREVIOUS BUTTON
-         --------------------------------------------------------- */
-
-    if (previousButton) {
-        previousButton.addEventListener("click", previousSlide);
-    }
-
-    /* ---------------------------------------------------------
-         SLIDESHOW DOTS
-         --------------------------------------------------------- */
-
-    dots.forEach(function (dot, index) {
-        dot.addEventListener("click", function () {
-            showSlide(index);
-        });
+    slides.forEach(function (slide) {
+      slide.classList.remove("active");
     });
 
-    /* ---------------------------------------------------------
-         AUTOMATIC SLIDESHOW
-         --------------------------------------------------------- */
+    /* Reset all dots */
 
-    function startSlideshow() {
-        clearInterval(slideshowTimer);
+    dots.forEach(function (dot) {
+      dot.classList.remove("active");
+    });
 
-        slideshowTimer = setInterval(function () {
-            if (!slideshowPaused) {
-                nextSlide();
-            }
-        }, 5500);
+    /* Show current slide */
+
+    slides[currentSlide].classList.add("active");
+
+    /* Activate matching dot */
+
+    if (dots[currentSlide]) {
+      dots[currentSlide].classList.add("active");
     }
 
-    /* ---------------------------------------------------------
-         PAUSE WHEN MOUSE IS OVER SLIDESHOW
-         --------------------------------------------------------- */
+    console.log("Showing slide:", currentSlide + 1);
+  }
 
-    if (slideshow) {
-        slideshow.addEventListener("mouseenter", function () {
-            slideshowPaused = true;
-        });
+  /* ---------------------------------------------------------
+       NEXT SLIDE
+       --------------------------------------------------------- */
 
-        slideshow.addEventListener("mouseleave", function () {
-            slideshowPaused = false;
-        });
-    }
+  function nextSlide() {
+    showSlide(currentSlide + 1);
+  }
 
-    /* ---------------------------------------------------------
-         START SLIDESHOW
-         --------------------------------------------------------- */
+  /* ---------------------------------------------------------
+       PREVIOUS SLIDE
+       --------------------------------------------------------- */
 
-    showSlide(0);
+  function previousSlide() {
+    showSlide(currentSlide - 1);
+  }
 
-    startSlideshow();
+  /* ---------------------------------------------------------
+       NEXT BUTTON
+       --------------------------------------------------------- */
+
+  if (nextButton) {
+    nextButton.addEventListener("click", nextSlide);
+  }
+
+  /* ---------------------------------------------------------
+       PREVIOUS BUTTON
+       --------------------------------------------------------- */
+
+  if (previousButton) {
+    previousButton.addEventListener("click", previousSlide);
+  }
+
+  /* ---------------------------------------------------------
+       SLIDESHOW DOTS
+       --------------------------------------------------------- */
+
+  dots.forEach(function (dot, index) {
+    dot.addEventListener("click", function () {
+      showSlide(index);
+    });
+  });
+
+  /* ---------------------------------------------------------
+       AUTOMATIC SLIDESHOW
+       --------------------------------------------------------- */
+
+  function startSlideshow() {
+    clearInterval(slideshowTimer);
+
+    slideshowTimer = setInterval(function () {
+      if (!slideshowPaused) {
+        nextSlide();
+      }
+    }, 5500);
+  }
+
+  /* ---------------------------------------------------------
+       PAUSE WHEN MOUSE IS OVER SLIDESHOW
+       --------------------------------------------------------- */
+
+  if (slideshow) {
+    slideshow.addEventListener("mouseenter", function () {
+      slideshowPaused = true;
+    });
+
+    slideshow.addEventListener("mouseleave", function () {
+      slideshowPaused = false;
+    });
+  }
+
+  /* ---------------------------------------------------------
+       START SLIDESHOW
+       --------------------------------------------------------- */
+
+  showSlide(0);
+
+  startSlideshow();
 });
 
 /* =========================================================
@@ -199,31 +192,31 @@ document.addEventListener("DOMContentLoaded", function () {
    ========================================================= */
 
 document.addEventListener("DOMContentLoaded", function () {
-    const publishingPopup = document.querySelector("#publishingPopup");
+  const publishingPopup = document.querySelector("#publishingPopup");
 
-    const popupClose = document.querySelector(".popup-close");
+  const popupClose = document.querySelector(".popup-close");
 
-    /* ---------------------------------------------------------
-         CLOSE POPUP
-         --------------------------------------------------------- */
+  /* ---------------------------------------------------------
+       CLOSE POPUP
+       --------------------------------------------------------- */
 
-    if (popupClose && publishingPopup) {
-        popupClose.addEventListener("click", function () {
-            publishingPopup.style.display = "none";
-        });
-    }
+  if (popupClose && publishingPopup) {
+    popupClose.addEventListener("click", function () {
+      publishingPopup.style.display = "none";
+    });
+  }
 
-    /* ---------------------------------------------------------
-         SHOW POPUP AFTER 3 SECONDS
-         --------------------------------------------------------- */
+  /* ---------------------------------------------------------
+       SHOW POPUP AFTER 3 SECONDS
+       --------------------------------------------------------- */
 
-    if (publishingPopup) {
-        publishingPopup.style.display = "none";
+  if (publishingPopup) {
+    publishingPopup.style.display = "none";
 
-        setTimeout(function () {
-            publishingPopup.style.display = "flex";
-        }, 3000);
-    }
+    setTimeout(function () {
+      publishingPopup.style.display = "flex";
+    }, 3000);
+  }
 });
 
 /* =========================================================
@@ -231,51 +224,51 @@ document.addEventListener("DOMContentLoaded", function () {
    ========================================================= */
 
 document.addEventListener("DOMContentLoaded", function () {
-    const featuredProducts = document.querySelector("#featuredProducts");
+  const featuredProducts = document.querySelector("#featuredProducts");
 
-    const products = [
-        {
-            name: "Excel & Succeed Books",
-            category: "Secondary Textbooks",
-            brand: "Excel / Succeed",
-            image: "images/books.jpeg",
-        },
+  const products = [
+    {
+      name: "Excel & Succeed Books",
+      category: "Secondary Textbooks",
+      brand: "Excel / Succeed",
+      image: "images/books.jpeg",
+    },
 
-        {
-            name: "Primary School Textbooks",
-            category: "Primary Books",
-            brand: "Nkhungudzu Bookshop",
-            image: "images/books.jpeg",
-        },
+    {
+      name: "Primary School Textbooks",
+      category: "Primary Books",
+      brand: "Nkhungudzu Bookshop",
+      image: "images/books.jpeg",
+    },
 
-        {
-            name: "Bibles",
-            category: "Spiritual Literature",
-            brand: "NIV / KJV / NKJV",
-            image: "images/bibles.jpeg",
-        },
+    {
+      name: "Bibles",
+      category: "Spiritual Literature",
+      brand: "NIV / KJV / NKJV",
+      image: "images/bibles.jpeg",
+    },
 
-        {
-            name: "School & Office Stationery",
-            category: "Stationery",
-            brand: "Various Products",
-            image: "images/stationary.jpeg",
-        },
-    ];
+    {
+      name: "School & Office Stationery",
+      category: "Stationery",
+      brand: "Various Products",
+      image: "images/stationary.jpeg",
+    },
+  ];
 
-    function displayProducts() {
-        if (!featuredProducts) {
-            return;
-        }
+  function displayProducts() {
+    if (!featuredProducts) {
+      return;
+    }
 
-        featuredProducts.innerHTML = "";
+    featuredProducts.innerHTML = "";
 
-        products.forEach(function (product) {
-            const productCard = document.createElement("article");
+    products.forEach(function (product) {
+      const productCard = document.createElement("article");
 
-            productCard.classList.add("product-card");
+      productCard.classList.add("product-card");
 
-            productCard.innerHTML = `
+      productCard.innerHTML = `
 
                     <div class="product-image">
 
@@ -308,11 +301,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
                 `;
 
-            featuredProducts.appendChild(productCard);
-        });
-    }
+      featuredProducts.appendChild(productCard);
+    });
+  }
 
-    displayProducts();
+  displayProducts();
 });
 
 /* =========================================================
@@ -320,38 +313,54 @@ document.addEventListener("DOMContentLoaded", function () {
    ========================================================= */
 
 document.addEventListener("DOMContentLoaded", function () {
-    const searchInput = document.querySelector(".header-search input");
+  const searchInput = document.querySelector(".header-search input");
 
-    const searchButton = document.querySelector(".header-search button");
+  const searchButton = document.querySelector(".header-search button");
 
-    function performSearch() {
-        if (!searchInput) {
-            return;
-        }
-
-        const searchTerm = searchInput.value.trim();
-
-        if (searchTerm === "") {
-            alert("Please enter something to search for.");
-
-            return;
-        }
-
-        window.location.href =
-            "/pages/pricelist.html?search=" + encodeURIComponent(searchTerm);
+  function performSearch() {
+    if (!searchInput) {
+      return;
     }
 
-    if (searchButton) {
-        searchButton.addEventListener("click", performSearch);
+    const searchTerm = searchInput.value.trim();
+
+    if (searchTerm === "") {
+      alert("Please enter something to search for.");
+
+      return;
     }
 
-    if (searchInput) {
-        searchInput.addEventListener("keydown", function (event) {
-            if (event.key === "Enter") {
-                performSearch();
-            }
-        });
-    }
+    /*
+     * Build the target URL relative to whichever folder the
+     * current page is actually in, instead of assuming the
+     * site is hosted at the domain root. This makes the
+     * search work from the homepage (root), from inside
+     * /pages/, when opened via file://, and when hosted
+     * under a subpath.
+     */
+
+    const isInsidePagesFolder =
+      window.location.pathname.includes("/pages/");
+
+    const pricelistUrl = isInsidePagesFolder
+      ? "pricelist.html"
+      : "pages/pricelist.html";
+
+    window.location.href =
+      pricelistUrl + "?search=" + encodeURIComponent(searchTerm);
+  }
+
+  if (searchButton) {
+    searchButton.addEventListener("click", performSearch);
+  }
+
+  if (searchInput) {
+    searchInput.addEventListener("keydown", function (event) {
+      if (event.key === "Enter") {
+        performSearch();
+      }
+    });
+  }
 });
 
 /* =========================================================
