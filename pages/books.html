@@ -35,13 +35,8 @@
 <div class="top-bar">
     <div class="container">
         <div class="top-contact">
-            <span><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor"
-                       stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path
-                    d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"/></svg> 0998 184 070</span>
-            <span><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor"
-                       stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect
-                    width="20" height="16" x="2" y="4" rx="2"/><path
-                    d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg> nkhungudzubookshop@gmail.com</span>
+            <span>📞 0998 184 070</span>
+            <span>✉️ nkhungudzubookshop@gmail.com</span>
         </div>
 
         <div class="top-social">
@@ -74,13 +69,7 @@
                     aria-label="Search products"
             />
 
-            <button type="button" aria-label="Search">
-                <svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor"
-                     stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                    <circle cx="11" cy="11" r="8"/>
-                    <path d="m21 21-4.3-4.3"/>
-                </svg>
-            </button>
+            <button type="button" aria-label="Search">🔍</button>
         </div>
     </div>
 </header>
@@ -90,14 +79,7 @@
      ===================================================== -->
 <nav class="main-navigation">
     <div class="container nav-container">
-        <button class="mobile-menu-button" type="button">
-            <svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor"
-                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <path d="M4 12h16"/>
-                <path d="M4 6h16"/>
-                <path d="M4 18h16"/>
-            </svg>
-        </button>
+        <button class="mobile-menu-button" type="button">☰</button>
 
         <ul class="nav-menu">
             <li>
@@ -212,173 +194,16 @@
                        BOOK COLLECTION
                        ========================================= -->
 
-            <div class="books-grid">
-                <!-- PRIMARY BOOKS -->
+            <div class="price-results-info">
+                <p id="booksResultsCount">Loading books...</p>
+            </div>
 
-                <article class="book-category-card" data-category="primary">
-                    <div class="book-card-icon">
-                        <svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor"
-                             stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                            <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
-                            <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
-                        </svg>
-                    </div>
+            <div class="price-grid" id="booksContainer"></div>
 
-                    <div class="book-card-content">
-                        <span class="book-card-label"> PRIMARY EDUCATION </span>
-
-                        <h3>Primary School Books</h3>
-
-                        <p>
-                            Textbooks for Standard 1 to Standard 8 covering subjects
-                            including English, Mathematics, Chichewa, Science,
-                            Agriculture, Bible Knowledge and more.
-                        </p>
-
-                        <a href="pricelist.html" class="text-link"> View Prices → </a>
-                    </div>
-                </article>
-
-                <!-- SECONDARY BOOKS -->
-
-                <article class="book-category-card" data-category="secondary">
-                    <div class="book-card-icon">
-                        <svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor"
-                             stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                            <path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"/>
-                            <path d="M22 10v6"/>
-                            <path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"/>
-                        </svg>
-                    </div>
-
-                    <div class="book-card-content">
-                        <span class="book-card-label"> SECONDARY EDUCATION </span>
-
-                        <h3>Secondary Textbooks</h3>
-
-                        <p>
-                            Educational books for JCE and MSCE learners from trusted
-                            publishers and brands.
-                        </p>
-
-                        <p class="publisher-list">
-                            Target • Arise • Excel / Succeed • Achievers • Jhango •
-                            Strides • Chanco • Better Future • Giant and more.
-                        </p>
-
-                        <a href="pricelist.html" class="text-link"> View Prices → </a>
-                    </div>
-                </article>
-
-                <!-- LITERATURE -->
-
-                <article class="book-category-card" data-category="literature">
-                    <div class="book-card-icon">
-                        <svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor"
-                             stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                            <path d="M12 7v14"/>
-                            <path d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"/>
-                        </svg>
-                    </div>
-
-                    <div class="book-card-content">
-                        <span class="book-card-label"> LITERATURE </span>
-
-                        <h3>Literature Books</h3>
-
-                        <p>
-                            English and Chichewa literature including novels, plays, short
-                            stories and other recommended reading materials.
-                        </p>
-
-                        <p class="publisher-list">
-                            Macbeth • The Pearl • African Short Stories • Bwampini •
-                            Nthondo and more.
-                        </p>
-
-                        <a href="pricelist.html" class="text-link"> View Prices → </a>
-                    </div>
-                </article>
-
-                <!-- DICTIONARIES -->
-
-                <article class="book-category-card" data-category="dictionaries">
-                    <div class="book-card-icon">
-                        <svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor"
-                             stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                            <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
-                            <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
-                            <path d="M9 6h6"/>
-                            <path d="M9 10h3"/>
-                        </svg>
-                    </div>
-
-                    <div class="book-card-content">
-                        <span class="book-card-label"> REFERENCE BOOKS </span>
-
-                        <h3>Dictionaries &amp; Other Books</h3>
-
-                        <p>
-                            Build your vocabulary and improve your language skills with a
-                            variety of dictionaries and reference books.
-                        </p>
-
-                        <p class="publisher-list">Oxford • Cambridge and more.</p>
-
-                        <a href="pricelist.html" class="text-link"> View Prices → </a>
-                    </div>
-                </article>
-
-                <!-- TEACHER'S GUIDES -->
-
-                <article class="book-category-card" data-category="teachers">
-                    <div class="book-card-icon">
-                        <svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor"
-                             stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                            <path d="M2 3h20"/>
-                            <path d="M21 3v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V3"/>
-                            <path d="m7 21 5-5 5 5"/>
-                        </svg>
-                    </div>
-
-                    <div class="book-card-content">
-                        <span class="book-card-label"> FOR EDUCATORS </span>
-
-                        <h3>Teacher's Guides</h3>
-
-                        <p>
-                            Primary and secondary teacher's guides designed to support
-                            educators in lesson preparation and classroom teaching.
-                        </p>
-
-                        <a href="pricelist.html" class="text-link"> View Prices → </a>
-                    </div>
-                </article>
-
-                <!-- MADE SIMPLE -->
-
-                <article class="book-category-card" data-category="secondary">
-                    <div class="book-card-icon">
-                        <svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor"
-                             stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                            <path d="M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z"/>
-                            <path d="m15 5 4 4"/>
-                        </svg>
-                    </div>
-
-                    <div class="book-card-content">
-                        <span class="book-card-label"> STUDY GUIDES </span>
-
-                        <h3>Made Simple Books</h3>
-
-                        <p>
-                            Revision and study materials including JCE and MSCE guides for
-                            different subjects.
-                        </p>
-
-                        <a href="pricelist.html" class="text-link"> View Prices → </a>
-                    </div>
-                </article>
+            <div class="no-price-results" id="noBooksResults" style="display: none">
+                <div class="no-results-icon">🔎</div>
+                <h3>No books found</h3>
+                <p>We couldn't find anything in this category right now.</p>
             </div>
         </div>
     </section>
@@ -469,31 +294,11 @@
         <div class="footer-column">
             <h3>Contact Us</h3>
 
-            <p>
-                <svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor"
-                     stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                    <path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"/>
-                </svg>
-                0998 184 070
-            </p>
+            <p>📞 0998 184 070</p>
 
-            <p>
-                <svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor"
-                     stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                    <rect width="20" height="16" x="2" y="4" rx="2"/>
-                    <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
-                </svg>
-                nkhungudzubookshop@gmail.com
-            </p>
+            <p>✉️ nkhungudzubookshop@gmail.com</p>
 
-            <p>
-                <svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor"
-                     stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                    <path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/>
-                    <circle cx="12" cy="10" r="3"/>
-                </svg>
-                Malawi
-            </p>
+            <p>📍 Malawi</p>
         </div>
 
         <!-- Social -->
@@ -524,6 +329,7 @@
      JAVASCRIPT
      ===================================================== -->
 
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script src="../js/books.js"></script>
 <script src="../js/script.js"></script>
 </body>
